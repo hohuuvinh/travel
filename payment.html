@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	  
+	  <!-- Fontawsome -->
+	  <link rel="stylesheet" type="text/css" href="css/all.css">
+	  <!-- JS -->
+	  <script type="text/javascript"src="js/jquery-3.3.1.slim.min.js"></script>
+	  
+	  <script type="text/javascript"src="js/popper.min.js"></script>
+	  <script type="text/javascript"src="css/bootstrap.min.css"></script>
+	  <script type="text/javascript"src="js/bootstrap.min.js"></script>
+	  <!-- Fontawsome -->
+	  <script type="text/javascript" src="js/all.js"></script>
+	  
+</head>
+<body>
+	<style type="text/css">
+	body{
+		background: #FFEBCD;
+	}
+	p.title_room_choose{
+    -webkit-box-orient: vertical;
+	font-size: 1rem;
+    margin-bottom: 0;
+    display: -webkit-box;
+    max-height: 52px;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+		::-webkit-scrollbar:horizontal { 
+     display: none; 
+ }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FFF6EB;
+}
+::-webkit-scrollbar-track {    
+    background-color: #fff;
+}
+
+@media screen and (max-width:764px){
+	.input_form{
+		margin-left: 1rem !important;
+		margin-right: 1rem !important;
+	}
+	.mb_form{
+		margin-bottom: 0px !important;
+	}
+	.input_form_div{
+		margin-bottom: 1rem !important;
+	}
+	.question{
+		margin-left: 1rem !important;
+		margin-right: 1rem !important;
+	}
+	.box_payment{
+		order: 1;
+	}
+	.payment_input_box_main{
+		order: 2;
+	}
+	.box_payment{
+		padding-left:1rem !important;
+		margin-top: 1rem !important;
+		padding-right:1rem !important;
+	}
+	.box_info_payment_main{
+		padding-bottom:1rem !important;
+		border-radius: 4px;
+	}
+	
+
+}
+	</style>
+
+
+
+
+
+<style type="text/css">
+     
+.menu{
+	-webkit-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+-moz-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+	background: #fff;
+	position: fixed;
+	z-index: 99999;
+	height: 60px;
+}
+.menu nav{ 
+  width: 100%;
+}
+ .menu label.logo{
+  color: black;
+  font-size: 35px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+ .menu nav ul{
+  float: right;
+  margin-right: 20px;
+}
+ .menu nav ul li{
+  display: inline-block;
+  margin: 18px 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  padding: 7px 10px;
+  border-radius: 3px;
+
+}
+a:hover{
+  opacity: 0.8;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    display: none;
+  }
+  nav ul li a{
+    float: left;
+    color: #Fff;
+    text-align: center;
+  }
+  
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  .menu nav ul {
+  	padding: 0;
+  	padding-top: 2rem;
+  }
+  ul{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #2c3e50;
+    
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+    </style>
+
+
+
+	<div class="menu_main container-fluid p-0" style="height: 60px;">
+		
+
+		<div class="menu" style="width: 100%;">
+    	<nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">TraveIcon</label>
+      <ul>
+        <li><a href="#" style="text-decoration: none;">Thuê khách sạn</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Resort</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Tour</a></li>
+        <li><a href="#" style="text-decoration: none;">Xe đưa đón</a></li>
+        <li><a href="#" style="text-decoration: none;">Đăng nhập</a></li>
+      </ul>
+    </nav>
+    </div>
+
+
+
+	</div>
+
+
+
+
+
+ <div class=" container-fluid p-0" style="background: #FFEBCD; font-family: Helvetica, Arial, sans-serif;">
+
+    	
+
+	    <div class="row m-0">
+	      <div class=" payment_input_box_main col-lg-9 col-md-8 col-sm-12 pt-3" style="background: #FFEBCD;">
+	      	<div class="khung mb-3 p-2" style="background: white; border-radius: 3px;">
+	      		<div class="row">
+	      			<style type="text/css">
+	      				.text_input_step{
+	      					color: #F26A36;
+	      				}
+	      				.text_input_step:hover{
+	      					background: #F26A36 !important;
+	      					color: #fff !important;
+	      				}
+	      			</style>
+	      			<div class="col-lg-3 col-md-3 col-sm-12">
+		      			<div class="text_input_step btn text-center ml-2 border-0 font-weight-bold" id="btn1" >1. Thông tin cá nhân</div>
+		      		</div>
+		      		<div class="col-lg-3 col-md-3 col-sm-12">
+		      			<div class="text_input_step btn text-center ml-2 border-0 font-weight-bold" id="btn2" >2. Thông tin thanh toán</div>
+		      		</div>	
+		      		<div class="col-lg-3 col-md-3 col-sm-12">	
+		      			<div class="text_input_step btn font-weight-bold text-center ml-2 border-0" id="btn3" >3. Thanh toán</div>
+		      		</div>	
+		      		<div class="col-lg-3 col-md-3 col-sm-12">
+		      			<div class="text_input_step btn font-weight-bold text-center ml-2 border-0" id="btn4" >4. Thông tin nhận phòng</div>
+		      		</div>	
+	      		</div>
+	      	</div>
+
+	      	<div class="khung pt-3" style="width: 100%; background: white; border-radius: 3px;">
+	      		<h3 class="ml-3 text-info">Thông tin cá nhân</h3>
+	      		<form class="input_form ml-5 mr-5">
+				  <div class="mb_form form-row mb-3">
+
+				    <div class="col-lg-3 col-md-3 col-sm-12 mt-2 mb-2">
+
+				    	<div class="input_info_text">
+				    		<p>Danh xưng</p>
+				    		<select name="chon" style=" padding-left: 6px;padding-bottom: 8px;">
+								<option value="IT18A11">  Anh  </option>
+								<option value="IT18A12">  Chị  </option>	
+							</select>
+				      	</div>
+
+				    </div>
+				    <style type="text/css">
+				    	.input_info_text{
+				    		width: 100%; background: white; border-radius: 5px; border: 1px solid #DCDCDC; font-size: 14px;
+				    	}
+				    	.input_info_text p{
+				    		margin-top: 6px; padding-left: 10px; height: 10px; color: #A9A9A9
+				    	}
+				    	.input_info_text input,.input_info_text select{
+				    		width: 100%; border: 0; border-radius: 5px; font-weight: bold; color: black; padding-left: 10px;padding-bottom: 5px;outline: none;
+				    	}
+				    </style>
+
+				    <div class=" col-lg-3 col-md-3 col-sm-12 mt-2 mb-2">
+				    	<div class="input_info_text" style="">
+				    		<p style="">Họ</p>
+				    		<input style="" type="text" placeholder="Họ khách đặt">
+				      	</div>
+				    </div>
+
+				    <div class="col-lg-3 col-md-3 col-sm-12 mt-2 mb-2">
+				      <div class="input_info_text" >
+				    		<p >Tên</p>
+				    		<input type="text" placeholder="Tên khách đặt">
+				      	</div>
+				    </div>
+
+				    <div class="col-lg-3 col-md-3 col-sm-12 mt-2 mb-2">
+				      <div class="input_info_text" >
+				    		<p >Số điện thoại</p>
+				    		<input type="text" placeholder="0123456789">
+				      	</div>
+				    </div>
+
+				  </div>
+				</form>
+
+				<form class="input_form ml-5 mr-5">
+				  <div class="input_form_div form-row mb-5">
+
+				    <div class="col-lg-6 col-md-6 col-sm-12 mt-2 mb-2">
+
+				    	<div class="input_info_text">
+				    		<p>Địa chỉ email</p>
+				    		<input type="email" placeholder="khachtest@gmail.com">
+				      	</div>
+
+				    </div>
+
+				    <div class="col-lg-6 col-md-6 col-sm-12 mt-2 mb-2">
+				    	<div class="input_info_text">
+				    		<p>Xác nhận lại địa chỉ email</p>
+				    		<input type="email" placeholder="khachtest@gmail.com">
+				      	</div>
+				    </div>
+
+				  </div>
+				</form>
+
+				<form class="question ml-5 mr-5 mb-3">
+					<h4 class="font-weight-bold">Bạn đặt phòng cho ai</h4>
+					<!-- Default inline 1-->
+					<div class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input" id="defaultInline1">
+					  <label class="custom-control-label" for="defaultInline1">Tôi là khách lưu trú chính</label>
+					</div>
+
+					<!-- Default inline 2-->
+					<div class="custom-control custom-checkbox mt-1">
+					  <input type="checkbox" class="custom-control-input" id="defaultInline2">
+					  <label class="custom-control-label" for="defaultInline2">Đặt phòng này cho người khác</label>
+					</div>
+				</form>
+				<style type="text/css">
+					.continua{
+						width: 100%;background: #FE753E;color: #fff;
+					}
+					.continua:hover{
+						opacity: 0.9;
+						color: #fff
+					}
+				</style>
+	      		<div class="continua btn" style="">Tiếp theo</div>
+	      	</div>
+	      </div>
+
+	      <style type="text/css">
+	      	.box_payment{
+	      		padding-left: 0rem;background: background: #FFEBCD;padding-right: 0;
+	      	}
+	      	.box_payment .box_info_payment_main{
+	      		width: 100%;padding-left: 1rem;padding-top: 0.5rem;padding-right: 1rem;padding-bottom: 12px;
+	      	}
+	      	.type_room{
+	      		height: 22px;padding: 0.24rem;border-radius: 3px;
+	      	}
+	      	.type_room p{
+	      		font-size: 59%;color: #fff;
+	      	}
+	      </style>
+
+			<div class="box_payment col-lg-3 col-md-4 col-sm-12" style="">
+				<div class="box_info_payment_main bg-white" style="">
+				<p style="font-size: 130%;font-weight: bold;margin-bottom: 10px;">Phòng đã chọn</p>
+
+				
+<div data-spy="scroll" data-target="#myScrollspy" data-offset="10"
+                  style="height:270px;overflow-y: scroll;padding-top: 5px;padding-right: 10px;">
+
+
+				 <div class="card mb-3" style="border: 0">
+             		 <div class="row m-0">
+                  		<div style="width: 32%;height: 85px;">
+                      		<img src="img/post/IMG_7423.jpg" width="100%" height="85px" style="border-radius: 5px;">	
+                 		 </div>
+
+                 		 <div class="pl-3" style="width: 68%;height: 85px;">
+                     		 <div class="card-title">
+                     		 	<div class="type_room float-left mb-1" style="background: #FF783A;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                     		 	<div class="type_room float-left ml-2 mb-1" style="background: #FFC045;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                      		
+                          		<p class="title_room_choose card-text font-weight-bold mb-0" style="font-size: 90%;clear: left;">Phòng Gường Đôi hoặc 2 Giường Đơn</p>
+                          		<p class="float-right font-weight-bold" style="font-size: 110%;margin-top: -2px;">1.230.000 đ</p>
+                      		</div>
+                 		 </div>
+             		 </div>
+         		 </div>
+
+         		  <div class="card mb-3" style="border: 0">
+             		 <div class="row m-0">
+                  		<div style="width: 32%;height: 85px;">
+                      		<img src="img/post/IMG_7423.jpg" width="100%" height="85px" style="border-radius: 5px;">	
+                 		 </div>
+
+                 		 <div class="pl-3" style="width: 68%;height: 85px;">
+                     		 <div class="card-title">
+                     		 	<div class="type_room float-left mb-1" style="background: #FF783A;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                     		 	<div class="type_room float-left ml-2 mb-1" style="background: #FFC045;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                      		
+                          		<p class=" title_room_choose card-text font-weight-bold mb-0" style="font-size: 90%;clear: left;">Phòng Gường Đôi hoặc 2 Giường Đơn</p>
+                          		<p class="float-right font-weight-bold" style="font-size: 110%;margin-top: -2px;">1.230.000 đ</p>
+                      		</div>
+                 		 </div>
+             		 </div>
+         		 </div>
+
+         		  <div class="card mb-3" style="border: 0">
+             		 <div class="row m-0">
+                  		<div style="width: 32%;height: 85px;">
+                      		<img src="img/post/IMG_7423.jpg" width="100%" height="85px" style="border-radius: 5px;">	
+                 		 </div>
+
+                 		 <div class="pl-3" style="width: 68%;height: 85px;">
+                     		 <div class="card-title">
+                     		 	<div class="type_room float-left mb-1" style="background: #FF783A;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                     		 	<div class="type_room float-left ml-2 mb-1" style="background: #FFC045;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                      		
+                          		<p class=" title_room_choose card-text font-weight-bold mb-0" style="font-size: 90%;clear: left;">Phòng Gường Đôi hoặc 2 Giường Đơn</p>
+                          		<p class="float-right font-weight-bold" style="font-size: 110%;margin-top: -2px;">1.230.000 đ</p>
+                      		</div>
+                 		 </div>
+             		 </div>
+         		 </div>
+        </div>
+        
+
+         		 <p style="font-size: 130%;font-weight: bold;margin-top: 10px;">Thanh toán đặt phòng</p>
+         		 <div>
+	         		 <div class="khung1" style="height: 20px;">
+	         		 	<p class="float-left mb-2">Giá phòng</p>
+	         		 	<p class="float-right mb-2">4,300,000đ</p>
+	         		 	<div style="clear: both;"></div>
+	         		 </div>
+         		 </div>
+         		
+         		 <div>
+	         		  <div class="khung2" style="height: 20px;clear: left;">
+	         		 	<p class="float-left">Vat (10%)</p>
+	         		 	<p class="float-right">430,000đ</p>
+	         		 </div>
+         		 </div>
+         		 
+         		 <hr style="background: #ccc">
+         		 
+
+         		 <div>
+	         		 <div class="khung3" style="height: 50px">
+	         		 	<div class="khung4 float-left" style="height: 30px">
+		         		 	<p style="height: 12px; font-weight: bold;font-size: 120%">Tổng</p>
+		         		 	<p class="text-muted" style="font-size: 12px">Bao gồm (vat)</p>
+	         		 	</div>
+	         		 	<div class="khung5 float-right" style="height: 30px">
+	         		 		<p style="font-weight: bold; font-size: 120%">4,300,000đ</p>
+	         		 	</div>
+	         		 	<br>
+	         		 	
+	         		 </div>
+         		 </div>
+
+         		  <div>
+	         		 <div class="khung3 p-2 mt-2" style="background: #F4FAFF; height: 60px;border-radius: 10px;">
+	         		 	<div class="khung4 float-left" style="height: 30px">
+		         		 	<p style="height: 10px; font-weight: bold">Khuyến mãi</p>
+		         		 	<p class="text-muted" style="font-size: 10px">Cho lần đặt phòng tiếp theo</p>
+	         		 	</div>
+	         		 	<div class="khung5 float-right" style="height: 30px">
+	         		 		<p style="font-weight: bold; font-size: 18px;">100,000đ</p>
+	         		 	</div>
+	         		 	<br>
+	         		 </div>
+         		 </div>
+
+			</div>
+	    </div>	    	
+    </div>
+    
+</body>
+</html>
