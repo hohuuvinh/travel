@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slick Playground</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+<!-- <input id="datepicker" width="230" placeholder="s"> -->
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+    </script>
+
+
+
+  
+</head>
+<body>
+
+  <style type="text/css">
+      *{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+nav{
+
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 10px;
+  border-radius: 3px;
+
+}
+a:hover{
+  opacity: 0.8;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    display: none;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #2c3e50;
+    
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  
+}
+    </style>
+  <div class="container-fluid p-0" style="height: 80px;background: green;display: flex;">
+    <div class="searchtest pl-2" style="width: 45%;height: 80px;background: yellow;padding-top: 1.2rem;">
+      
+
+      <div class="search_box" style="width: 95%;height: 40px;display: flex;background: #fff;border-radius: 10px;">
+  <div class="search_text" style="width: 43%;height: 40px;">
+    <input type="text" placeholder="Thành phố - Khách sạn - Điểm đến" style="width: 100%;height: 100%;border:0;border-radius: 8px;outline: none;padding-left: 10px;">
+  </div>
+  <div class="line_search" style="width: 0.2%;height: 40px;background: #ccc;">
+    
+  </div>
+
+  <div class="calendar_box" style="width: 41%;height: 40px;display: flex;background: #fff;border-radius: 10px;">
+     
+  <div class="calendar" style="width: 47%;height: 40px;border-radius: 10px;padding-left: 15px;">
+    <input id="datepicker" width="100%" height="100%" placeholder="Ngày đến" style="border:0;background: #fff;border-radius: 10px;">
+  </div>
+
+  <div class="calendar_line" style="width: 6%;height: 40px;padding-top: 0.5rem;border-radius: 10px;"> - </div>
+  <div class="calendar" style="width: 47%;height: 40px;border-radius: 10px;">
+    <input id="datepicker2" width="100%" height="100%" placeholder="Ngày đến" style="border:0;background: #fff;border-radius: 10px;">
+
+</div>
+</div>
+<div class="function_box" style="width: 16%;height: 40px;display: flex;">
+  <div class="button_filter" style="width: 36px;height:36px;background: #F4FAFF;margin-top: 2px; border-radius: 8px;margin-right: 4px;padding-top: 4px;padding-left: 8px;">
+    <img src="img/icon/icon_settings.png" width="65%">
+  </div>
+  <div class="button_search " style="width: 60px;height:36px;background: #006E5D;margin-top: 2px;border-radius: 8px;padding-left: 24px;padding-top: 5px; ">
+    <img src="img/icon/icon_search.png" width="40%">
+  </div>
+</div>
+
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+
+        $('#datepicker2').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+    </script>
+
+</div>
+
+    </div>
+    <div class="searchtest2" style="width: 55%;height: 80px;background: pink;">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+   
+      <ul>
+        <li><a href="#">Thuê khách sạn</a></li>
+        <li><a href="#">Thuê Resort</a></li>
+        <li><a href="#">Thuê Tour</a></li>
+        <li><a href="#">Xe đưa đón</a></li>
+        <li><a href="#">Đăng nhập</a></li>
+      </ul>
+    </nav>
+
+    </div>
+  </div>
+
+  
+
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+      
+    });
+</script>
+
+</body>
+</html>

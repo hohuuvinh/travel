@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="test.css">
+	  <!-- Fontawsome -->
+	  <link rel="stylesheet" type="text/css" href="css/all.css">
+	  <!-- JS -->
+	  <script type="text/javascript"src="js/jquery-3.3.1.slim.min.js"></script>
+	  
+	  <script type="text/javascript"src="js/popper.min.js"></script>
+	  <script type="text/javascript"src="css/bootstrap.min.css"></script>
+	  <script type="text/javascript"src="js/bootstrap.min.js"></script>
+	  <!-- Fontawsome -->
+	  <script type="text/javascript" src="js/all.js"></script>
+	  
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<style type="text/css">
+			<style type="text/css">
+		<b:tag name='style'>/* <![CDATA[ */
+.buttons_added {
+    opacity: 1;
+    display:inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+    background: #E0FFFF;
+    }
+.is-form {
+    overflow:hidden;
+    position:relative;
+    background-color: #E0FFFF;
+    height:2.2rem;
+    width:1.9rem;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    /*border:1px solid #ddd;*/
+
+}
+.is-form:focus,.input-text:focus {
+    outline:none;
+}
+.is-form.minus {
+    border-radius:10px 0 0 10px;
+}
+.is-form.plus {
+    border-radius:0 10px 10px 0;
+}
+.input-qty {
+    background-color:#E0FFFF;
+    height:2.2rem;
+    text-align:center;
+    font-size:1rem;
+    display:inline-block;
+    vertical-align:top;
+    margin:0;
+    border-top:1px solid #E0FFFF;
+    border-bottom:1px solid #E0FFFF;
+    border-left:0;
+    border-right:0;
+    padding:0;
+
+}
+.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin:0;
+}
+.info_detail2{
+    display: none;
+}
+.info_detail2.responsive{
+    display: block;
+}
+
+ p.title_book_text{
+    -webkit-box-orient: vertical;
+	font-size: 1rem;
+    margin-bottom: 0;
+    display: -webkit-box;
+    max-height: 52px;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+p.title_room_text,p.calendar_book_text,p.room_number_text,p.people_number_text,p.money_number_text,.book_more{
+	overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+	}
+::-webkit-scrollbar:horizontal { 
+     display: none; 
+ }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FFF6EB;
+}
+::-webkit-scrollbar-track {    
+    background-color: #fff;
+}
+
+@media screen and (max-width:1000px){
+	#value_book{
+		display: none !important;
+	}
+	#booking_mobile{
+		display: block !important;
+	}
+	#booking_destop{
+		display: none !important;
+	}
+	#info_book_title{
+		display: none !important;
+	}
+	.box_main{
+		padding-right: 5px !important;
+	}
+	.cuon_box{
+		padding-top: 0 !important;
+		height: 300px !important;
+	}
+	}
+/* ]]> */</b:tag>
+	</style>
+
+	<div class=" container-fluid bg-dark p-3" style="width: 100%; font-family: Helvetica, Arial, sans-serif;">
+		<div class="box_main container-fluid bg-white p-3" style="border-radius: 20px">
+			<div class="row m-0" style="width: 100%;padding-right: 30px;">
+				
+				<div class="col-lg-4 col-md-4 col-sm-12 p-0 ">
+					<p style="font-size: 20px; font-weight: bold;">Các nơi ở đã chọn</p>
+				</div>
+
+				<div id="info_book_title" class="col-lg-8 col-md-8 col-sm-12 p-0" id="hidden" style="display: flex;">
+					<div class="calendar_book" style="width: 31%;height: 40px;padding: 10px; ">
+						<p class="calendar_book_text text-center"><i class="far fa-calendar-alt mr-2" style="font-size: 20px;"></i>Lịch đặt phòng</p>
+					</div>
+					<div class="room_number" style="width: 22%;height: 40px;padding: 10px; ">
+						
+					<p class="text-center room_number_text"><i class="fas fa-home mr-2" style="font-size: 20px;"></i>Số phòng</p>
+				
+					</div>
+					<div class="people_number" style="width: 22%;height: 40px;padding: 10px; ">
+						<p class="text-center people_number_text"><i class="fas fa-user-friends mr-2" style="font-size: 20px;"></i>Số người</p>
+					</div>
+					<div class="money_number" style="width: 25%;height: 40px;padding: 10px; ">
+						<p class="text-center money_number_text"><i class="fas fa-money-check-alt mr-2" style="font-size: 20px;"></i>Tổng tiền</p>
+					</div>
+					
+				</div>
+
+				
+
+			</div>
+
+			<!-- ------- -->
+			<div class="cuon_box" data-spy="scroll" data-target="#myScrollspy" data-offset="10"
+                  style="height:400px;overflow-y: scroll;padding-top: 5px;padding-right: 10px;background: ">
+			<div class="row m-0 mb-2"  style="">				
+				<div id="booking_destop" class="col-lg-4 col-md-4 col-sm-4">
+						<div class="card" style="border: 0;">
+	             		 <div class="row ">
+	                  		<div class="col-sm-5 col-xl-5 bg-warning p-0" >
+	                      		<img src="img/post/IMG_7423.jpg" class="card-img-top" id="img" style="border-radius: 10px; height: 100px; width: 100%" alt="...">	
+	                 		 </div>
+	                 		 <div class="col-sm-7 col-xl-7">
+	                     		 <div class=""> 		
+		                          <p class="title_book_text font-weight-bold mb-0 mt-1" style="font-size: 16px;line-height: 20px">Furama Luxstay Villa Repost Spa</p>
+		                          <p class="title_room_text mb-1" style="font-size: 12px">Phòng giường đôi hoặc hai giường đơn</p>
+		                          <a href="#"><div class="btn btn-warning text-white font-weight-bold" style="font-size: 12px;height: 28px;padding-top: 4px;">Xóa</div></a>
+		                     	  <a href="#"><div class="btn btn-danger font-weight-bold" style="font-size: 12px;height: 28px;padding-top: 4px;">Thanh toán</div></a>
+	                      		</div>  
+	                 		</div>
+	             		 </div>	             		 
+	        		 	</div>	
+				</div>
+
+				<div id="value_book" class="col-lg-8 col-md-8 col-sm-12 p-0" style="display: flex;align-items: center;">
+				  	<div class="calendar_book_value pl-1 pr-1" style="width: 31%;height: 40px;">
+				  		<div class="calendar_box" style="width: 100%;height: 40px;display: flex;background: #F4FAFF;border-radius: 10px;">
+						<div class="calendar_icon" style="width: 45%;height: 40px;border-radius: 10px;">
+							<input class="text-center" id="datepicker" width="100%" height="100%" placeholder="Ngày đến" style="border:0;background: #F4FAFF;border-radius: 10px;">
+						</div>
+						<div class="calendar_icon" style="width: 10%;height: 40px;padding-top: 0.5rem;padding-left: 0.7rem;border-radius: 10px;"> - </div>
+						<div class="calendar_icon" style="width: 45%;height: 40px;border-radius: 10px;">
+							<input class="text-center" id="datepicker2" width="100%" height="100%" placeholder="Ngày đến" style="border:0;background: #F4FAFF;border-radius: 10px;">
+						</div>
+					</div>
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+
+        $('#datepicker2').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+        $('#datepicker3').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+
+        $('#datepicker4').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+    </script>
+					</div>
+					<div class="room_number_value" style="width: 22%;height: 40px; ">
+						<div class="room_number_value_box" style="width: 60%;margin: auto;height: 40px;">
+					<div class="buttons_added" style="display: flex;">
+
+					  <input class="minus is-form border-0" type="button" value="-" style="width: 25%;height: 40px;background: #F4FAFF">
+					  <input aria-label="quantity" class="input-qty border-0" max="100" min="1" name="" type="number" value="1" style="width: 50%;height: 40px;background: #F4FAFF;outline: none;">
+					  <input class="plus is-form border-0" type="button" value="+" style="width: 25%;height: 40px;background: #F4FAFF">
+					</div>
+				</div>
+					</div>
+					<div class="people_number_value" style="width: 22%;height: 40px;">
+						<div class="room_number_value_box" style="width: 60%;margin: auto;height: 40px;">
+							<select class="border-0" style="width: 100%; background: #F4FAFF; border-radius: 10px; height: 40px;outline: none;">
+						<option>1</option>
+						<option>2</option>
+					</select>
+						</div>
+					</div>
+					<div class="money_number_value" style="width: 25%;height: 40px;padding: 10px; ">
+						<p class="text-center font-weight-bold" style="font-size: 120%;margin-top: -3px;">1,030,000 đ</p>
+					</div>
+				</div>
+
+				<div id="booking_mobile" class="col-lg-12 col-md-12 col-sm-12" style="display: none;">
+
+						<div class="card" style="border: 0;">
+	             		 <div class="card_main row" style="border-radius: 10px;">
+	             		 	<div class="col-md-6 col-sm-12 p-0">
+	             		 		<div class="row m-0">
+	                  		<div class="col-5 p-0" >
+	                      		<img onclick="show_more()" src="img/post/IMG_7423.jpg" class="card-img-top" id="img" style="border-radius: 10px; height: 100px; width: 100%" alt="...">	
+	                 		 </div>
+	                 		 <div class="col-7 p-1" style="padding-left: 8px !important;">
+	                     		 <div class=""> 		
+		                          <p class="title_book_text font-weight-bold mb-0" style="font-size: 15px;line-height: 20px">Furama Luxstay Villa Repost Spa</p>
+		                          <p class="title_room_text mb-1" style="font-size: 12px">Phòng giường đôi hoặc hai giường đơn</p>
+		                          <a href="#"><div class="btn btn-warning text-white font-weight-bold" style="font-size: 12px;height: 28px;padding-top: 4px;">Xóa</div></a>
+		                     	  <a href="#"><div class="btn btn-danger font-weight-bold" style="font-size: 12px;height: 28px;padding-top: 4px;">Thanh toán</div></a>
+	                      		</div>  
+	                 		</div>
+	                 		</div>
+
+
+	                 		<div id="show" class="info_detail2 row info_detail m-0" >
+	             		 	<div class="col-12 p-0 mt-2" >
+	             		 		<div class="calendar_book_value" style="width: 100%;height: 40px;">
+				  		<div class="calendar_box" style="width: 100%;height: 40px;display: flex;background: #F4FAFF;border-radius: 10px;">
+						<div class="calendar_icon" style="width: 45%;height: 40px;border-radius: 10px;">
+							<input class="text-center" id="datepicker3" width="100%" height="100%" placeholder="Ngày đến" style="border:0;background: #F4FAFF;border-radius: 10px;">
+						</div>
+
+						<div class="calendar_icon" style="width: 10%;height: 40px;padding-top: 0.5rem;padding-left: 0.7rem;border-radius: 10px;"> - </div>
+						<div class="calendar_icon" style="width: 45%;height: 40px;border-radius: 10px;">
+							<input class="text-center" id="datepicker4" width="100%" height="100%" placeholder="Ngày đến" style="border:0;background: #F4FAFF;border-radius: 10px;">
+						</div>
+
+					</div></div>
+	             		 	</div>
+
+	             		 	<div class="col-12  p-0 mt-2" style="display: flex;">
+	             		 		<div class="room_number_value" style="width: 50%;height: 40px; ">
+						<div class="room_number_value_box" style="width: 100%;margin: auto;height: 40px;">
+					<div class="buttons_added" style="display: flex;">
+
+					  <input class="minus is-form border-0" type="button" value="-" style="width: 25%;height: 40px;background: #F4FAFF">
+					  <input aria-label="quantity" class="input-qty border-0" max="100" min="1" name="" type="number" value="1" style="width: 50%;height: 40px;background: #F4FAFF;outline: none;">
+					  <input class="plus is-form border-0" type="button" value="+" style="width: 25%;height: 40px;background: #F4FAFF">
+					</div>
+				</div>
+					</div>	             	
+
+	             		 		<div class="people_number_value" style="width: 50%;height: 40px;">
+						<div class="room_number_value_box" style="width: 100%;margin: auto;height: 40px;">
+							<select class="border-0" style="width: 100%; background: #F4FAFF; border-radius: 10px; height: 40px;outline: none;">
+						<option>1</option>
+						<option>2</option>
+					</select>
+						</div>
+					</div>				
+	             		 	</div>
+
+	             		 	<div class="col-12 pl-2 pr-2 mt-2">
+	             		 		<p class="mb-1 float-left">Gía tiền</p>	             		 		             		 	
+	             		 		<p class="float-right mb-1" >2,500,000 đ</p>
+	             		 	</div>
+	             		 </div>
+	                 		</div>
+	             		 </div>
+	        		 	</div>
+	        		 	<script>
+       
+        $('#datepicker3').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+
+        $('#datepicker4').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+    </script>	
+				</div>				
+			</div>
+
+
+
+
+
+
+</div>
+			<!-- -------- -->
+								
+
+		<!-- ---------- -->
+
+		
+		<!-- --------- -->
+		<div class="row mt-1" style="width: 100%;">
+				
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<p class="mb-2" style="font-size: 150%; font-weight: bold;">Tổng thanh toán</p>
+					
+				</div>
+
+				<div class="col-lg-3 col-md-2 col-sm-12" id="hidden">
+					<p class="font-weight-bold mt-1 mb-2">Khuyến mãi giảm 20%</p>
+				</div>
+
+				<div class="col-lg-3 col-md-2 col-sm-12" id="hidden">
+					<p class="font-weight-bold mt-1 mb-2">Phụ phí 250.000đ</p>
+				</div>	
+
+				<div class="col-lg-2 col-md-2 col-sm-12" id="hidden">
+					<p class="font-weight-bold mb-2" style="font-size: 150%">4.500.000</p>
+					
+				</div>
+
+			</div>
+		<div class="row m-0">
+			<div class="col-6 p-0">
+					
+					<a href=""><div class="book_more btn btn-outline-success font-weight-bold" style="border:1px solid #FF641D;color: #FF641D;background: #fff;">Tôi muốn đặt thêm</div></a>
+				</div>
+			<div class="col-6 " id="hidden">
+					
+					<a href="#"><div class="btn btn-success font-weight-bold float-right" style="background: #FF641D;border:1px solid #FF641D;">Thanh toán</div></a>
+				</div>
+		</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+ 
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+      
+    });
+</script>
+
+	<script>//<![CDATA[
+
+$('input.input-qty').each(function() {
+  var $this = $(this),
+    qty = $this.parent().find('.is-form'),
+    min = Number($this.attr('min')),
+    max = Number($this.attr('max'))
+  if (min == 0) {
+    var d = 0
+  } else d = min
+  $(qty).on('click', function() {
+    if ($(this).hasClass('minus')) {
+      if (d > min) d += -1
+    } else if ($(this).hasClass('plus')) {
+      var x = Number($this.val()) + 1
+      if (x <= max) d += 1
+    }
+    $this.attr('value', d).val(d)
+  })
+})
+//]]></script>
+<script type="text/javascript">
+          function show_more() {
+  
+     var show_more = document.getElementById("show");
+
+  if (show_more.className == "info_detail2") {
+    show_more.className += " responsive";
+  
+  } else {
+    show_more.className = "info_detail2";
+  }
+}
+      </script>
+
+</body>
+</html>

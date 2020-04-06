@@ -93,7 +93,7 @@
 			display: none;
 		}
 		.box_post_slide{
-			width: 160px !important;
+			width: 172px !important;
 		}
 		.slick-slide{
 		margin: 0px 5px !important;
@@ -204,9 +204,10 @@ section{
   
 }
     </style>
-  <div class="menu" style="background: url(img/bg.jpg) no-repeat;
+  <div class="container-fluid" style="background: url(img/bg.jpg) no-repeat;
   background-size: cover;
-  height: calc(100vh);width: 100%">
+  height: calc(100vh);">
+
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -221,8 +222,54 @@ section{
         <li><a href="#">Đăng nhập</a></li>
       </ul>
     </nav>
+
+    <div class="search_box_main" style="width: 80%;height: 300px;margin: 0 auto;margin-top: 7rem;">
+      <p style="font-size: 240%;font-weight: bold;color: #fff;">Last moment a<br> Ultra last minute</p>
+      <p style="color: #fff;">Last moment a Ultra last minute Last moment a Ultra last minute</p>
+
+      <div class="search_box" style="width: 640px;height: 40px;display: flex;background: #fff;border-radius: 10px;">
+  <div class="search_text" style="width: 43%;height: 40px;">
+    <input type="text" placeholder="Thành phố - Khách sạn - Điểm đến" style="width: 100%;height: 100%;border:0;border-radius: 8px;outline: none;padding-left: 10px;">
+  </div>
+  <div class="line_search" style="width: 0.2%;height: 40px;background: #ccc;">
+    
+  </div>
+
+  <div class="calendar_box" style="width: 41%;height: 40px;display: flex;background: #fff;border-radius: 10px;">
+     
+  <div class="calendar" style="width: 47%;height: 40px;border-radius: 10px;padding-left: 15px;">
+    <input id="datepicker" width="100%" height="100%" placeholder="Ngày đến" style="border:0;background: #fff;border-radius: 10px;">
+  </div>
+
+  <div class="calendar_line" style="width: 6%;height: 40px;padding-top: 0.5rem;border-radius: 10px;"> - </div>
+  <div class="calendar" style="width: 47%;height: 40px;border-radius: 10px;">
+    <input id="datepicker2" width="100%" height="100%" placeholder="Ngày đến" style="border:0;background: #fff;border-radius: 10px;">
+
+</div>
+</div>
+<div class="function_box" style="width: 16%;height: 40px;display: flex;">
+  <div class="button_filter" style="width: 36px;height:36px;background: #F4FAFF;margin-top: 2px; border-radius: 8px;margin-right: 4px;padding-top: 4px;padding-left: 8px;">
+    <img src="img/icon/icon_settings.png" width="65%">
+  </div>
+  <div class="button_search " style="width: 60px;height:36px;background: #006E5D;margin-top: 2px;border-radius: 8px;padding-left: 24px;padding-top: 5px; ">
+    <img src="img/icon/icon_search.png" width="40%">
+  </div>
+</div>
+
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+
+        $('#datepicker2').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+    </script>
+    
     </div>
-  
+
+    </div>
+  </div>
 
   
 <div class="container-fluid mt-3">
