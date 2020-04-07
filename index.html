@@ -200,10 +200,202 @@ a:hover{
     left: 0;
   }
 }
-section{
-  
+.scroll_event_Add_class {
+  display: block !important;
+}
+@media (max-width: 484px){
+  input.destops{
+    display: none !important;
+  }
+  input.mobile{
+    display: block !important;
+  }
+}
+@media (max-width: 728px){
+  .calendar_box,.line_search{
+    display: none !important;
+  }
+  .search_text{
+    width: 100% !important;
+  }
 }
     </style>
+
+    <style type="text/css">
+      *{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+nav.menu_reponsive{
+  height: 80px;
+  width: 100%;
+}
+
+nav.menu_reponsive ul{
+  float: right;
+  margin-right: 20px;
+}
+nav.menu_reponsive ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav.menu_reponsive ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 10px;
+  border-radius: 3px;
+
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 484px){
+  input.destops{
+    display: none !important;
+  }
+  input.mobile{
+    display: block !important;
+  }
+}
+@media (max-width: 728px){
+  .calendar_box,.line_search{
+    display: none !important;
+  }
+  .search_text{
+    width: 100% !important;
+  }
+  .search_box_main{
+    display: none !important;
+  }
+}
+
+@media (max-width: 1258px){
+  .searchtest{
+    width: 90% !important;
+
+  }
+  .searchtest2{
+    width: 10% !important;
+  }
+  .checkbtn{
+    display: block;
+  }
+ nav.menu_reponsive ul{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #2c3e50;
+    
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav.menu_reponsive ul li{
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+  }
+  nav.menu_reponsive ul li a{
+    font-size: 20px;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+    </style>
+  <div id="scroll_event" style="width: 100%;position: fixed;display: none;z-index: 999;background: #fff;">
+    <div class="container-fluid p-0" style="display: flex;">
+    <div class="searchtest pl-2" style="width: 50%;height: 60px;padding-top: 10px;">     
+      <div class="search_box" style="width: 95%;height: 40px;display: flex;background: #fff;border-radius: 10px;">
+  <div class="search_text" style="width: 50%;height: 40px;">
+    <input class="destops" type="text" placeholder="Thành phố - Khách sạn - Điểm đến" style="width: 100%;height: 100%;border:0;border-radius: 8px;outline: none;padding-left: 10px;">
+    <input class="mobile" type="text" placeholder="Tìm kiếm" style="width: 100%;height: 100%;border:0;border-radius: 8px;outline: none;padding-left: 10px;display: none;">
+  </div>
+  <div class="line_search" style="width: 0.2%;height: 40px;background: #ccc;">
+    
+  </div>
+
+  <div class="calendar_box" style="width: 36%;height: 40px;display: flex;background: #fff;border-radius: 10px;">
+     
+  <div class="calendar" style="width: 47%;height: 40px;border-radius: 10px;">
+    <input class="text-center" id="datepicker3" width="100%" height="100%" placeholder="Ngày đến" style="border:0;background: #fff;border-radius: 10px;">
+  </div>
+
+  <div class="calendar_line" style="width: 6%;height: 40px;padding-top: 0.5rem;border-radius: 10px;"> - </div>
+  <div class="calendar" style="width: 47%;height: 40px;border-radius: 10px;">
+    <input class="text-center" id="datepicker4" width="100%" height="100%" placeholder="Ngày đi" style="border:0;background: #fff;border-radius: 10px;">
+
+</div>
+</div>
+<div class="function_box" style="height: 40px;padding-right: 2px;">
+  <div class="button_search float-right " style="width: 60px;height:36px;background: #006E5D;margin-top: 2px;border-radius: 8px;padding-left: 24px;padding-top: 5px; ">
+    <img src="img/icon/icon_search.png" width="40%">
+  </div>
+  <div class="button_filter float-right" style="width: 35%;height:36px;background: #F4FAFF;margin-top: 2px; border-radius: 8px;margin-right: 4px;padding-top: 4px;padding-left: 8px;">
+    <img src="img/icon/icon_settings.png" width="55%">
+  </div>
+  
+</div>
+
+    <script>
+        $('#datepicker3').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+
+        $('#datepicker4').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+    </script>
+
+</div>
+
+    </div>
+    <div class="searchtest2" style="width: 50%;height: 60px;">
+    <nav class="menu_reponsive">
+      <input class="check_reponsive" type="checkbox" id="check">
+      <label for="check" class="checkbtn" style="margin-top: -10px;">
+        <i class="fas fa-bars" style="color: black;"></i>
+      </label>
+   
+      <ul style="margin-top: -10px;">
+        <li><a href="#" style="color: black">Thuê khách sạn</a></li>
+        <li><a href="#" style="color: black">Thuê Resort</a></li>
+        <li><a href="#" style="color: black">Thuê Tour</a></li>
+        <li><a href="#" style="color: black">Xe đưa đón</a></li>
+        <li><a href="#" style="color: black">Đăng nhập</a></li>
+      </ul>
+    </nav>
+
+    </div>
+  </div>
+  </div>
+  <script>
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320) {
+    document.getElementById("scroll_event").className = "scroll_event_Add_class";
+  } else {
+    document.getElementById("scroll_event").className = "";
+  }
+}
+</script>
+
   <div class="container-fluid" style="background: url(img/bg.jpg) no-repeat;
   background-size: cover;
   height: calc(100vh);">
