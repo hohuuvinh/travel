@@ -20,13 +20,20 @@
 </head>
 <body>
   <style type="text/css">
-    
+    p.title_utilities,p.title_utilities_detail{
+	overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+	}
+	html,body{
+		overflow-x: hidden;
+	}
   </style>
-  <div class="tool_book_box p-2" style="width: 100%;height: 60px;background: #fff;position: fixed;margin-top: calc(100vh - 60px);z-index: 9999;">
+  <div class="tool_book_box p-2 pl-3 pr-3" style="width: 100%;height: 60px;background: #fff;position: fixed;margin-top: calc(100vh - 60px);z-index: 9999;">
     <div class="tool_function_love float-left" style="width: 45px;height: 45px;;border-radius: 8px;padding-top: 10px;padding-left: 10px;border:1px solid #FF631C; ">
       <i class="fa fa-list" aria-hidden="true" style="font-size: 140%;color:#FF631C "></i>
     </div>
-    <div class="tool_function_booking float-right" style="width: 265px;height: 45px;background:#FF631C;border-radius: 8px;padding-top: 10px;">
+    <div class="tool_function_booking float-right" style="width: 285px;height: 45px;background:#FF631C;border-radius: 8px;padding-top: 10px;">
       <p class="text-center text-white">Đặt phòng ngay</p>
     </div>
   </div>
@@ -85,8 +92,78 @@
       <p style="font-size: 95%">Tất cả các loại phòng nghỉ dưỡng, từ phòng Superior cho đến phòng Suite sang trọng đều được trang bị các tiện nghi hiện đại, phòng tắm đứng hoặc bồn tắm riêng trong từng loại phòng. 
                             Tất cả các loại phòng nghỉ dưỡng, từ phòng Superior cho đến phòng Suite sang trọng đều được trang bị các tiện nghi hiện đại, phòng tắm đứng hoặc bồn tắm riêng trong từng loại phòng. Khách sạn cách chùa Cầu ở ngay trung tâm phố cổ chỉ 3 phút đi bộ. Lang thang trên những con phố, bạn sẽ có dịp đắm mình trong di sản văn hóa và những điểm tham quan hấp dẫn, chợ đêm, cửa hàng, quán bar, nhà hàng và các cửa hàng thời trang. </p>
       <p class="font-weight-bold mb-1" style="font-size: 110%">Thông tin chi tiết</p>
-      <div class="info_detail_box" style="width: 100%;height: 200px;background: pink;"></div>
-      <p class="font-weight-bold mb-1 mt-3" style="font-size: 110%">Loại phòng</p>
+      <div class="info_detail_box" style="width: 100%;">
+      	<div class="row m-0">
+      		<div class="col-md-4 col-sm-6 col-lg-4 col-xs-12 p-0 pr-1" style="display: flex;">
+      			<div class="info_detail" style="width: 100%; height: 50px;display: flex;">
+          <div class="icon" style="width: 12%;height: 50px; ;">
+            <i class="fas fa-plane" style=" margin-top: 1rem; font-size:20px;"></i>
+          </div>  
+          <div class="conten" style="width: 60%; height: 50px;">
+            <p class="title_utilities" style="float: left; margin-top: 0.8rem; ">Sân bay quốc tế Nội Bài</p>
+          </div>    
+          <div class="conten1" style="width: 28%; height: 50px; float: right">
+            <p class="title_utilities_detail" style=" margin-top: 0.8rem; float: right;">28,16 km</p>
+          </div> 
+        </div>
+      		</div>
+
+
+
+      		<div class="col-md-4 col-sm-6 col-lg-4 col-xs-12 p-0 pr-1" style="display: flex;">
+      			<div class="info_detail" style="width: 100%; height: 50px;display: flex;">
+          <div class="icon" style="width: 12%;height: 50px;">
+            <i class="fas fa-home" style=" margin-top: 1rem; font-size:20px;"></i>
+          </div>  
+          <div class="conten" style="width: 60%; height: 50px;">
+            <p class="title_utilities" style="float: left; margin-top: 0.8rem; ">Cau Giay District</p>
+          </div>    
+          <div class="conten1" style="width: 28%; height: 50px; float: right">
+            <p class="title_utilities_detail" style=" margin-top: 0.8rem; float: right;">28,16 km</p>
+          </div> 
+        </div>
+      		</div>
+
+
+
+      		<div class="col-md-4 col-sm-6 col-lg-4 col-xs-12 p-0 pr-1" style="display: flex;">
+      			<div class="info_detail" style="width: 100%; height: 50px;display: flex;">
+          <div class="icon" style="width: 12%;height: 50px; ;">
+            <i class="fas fa-bus" style=" margin-top: 1rem; font-size:20px;"></i>
+          </div>  
+          <div class="conten" style="width: 60%; height: 50px;">
+            <p class="title_utilities" style="float: left; margin-top: 0.8rem; ">Hanoi Railway Station</p>
+          </div>    
+          <div class="conten1" style="width: 28%; height: 50px; float: right">
+            <p class="title_utilities_detail" style=" margin-top: 0.8rem; float: right;">28,16 km</p>
+          </div> 
+        </div>
+      		</div>
+
+
+
+      		<div class="col-md-4 col-sm-6 col-lg-4 col-xs-12 p-0 pr-1" style="display: flex;">
+      			<div class="info_detail" style="width: 100%; height: 50px;display: flex;">
+          <div class="icon" style="width: 12%;height: 50px; ;">
+            <i class="fas fa-flag" style=" margin-top: 1rem; font-size:20px;"></i>
+          </div>  
+          <div class="conten" style="width: 60%; height: 50px;">
+            <p class="title_utilities" style="float: left; margin-top: 0.8rem; ">Temple Of Literature</p>
+          </div>    
+          <div class="conten1" style="width: 28%; height: 50px; float: right">
+            <p class="title_utilities_detail" style=" margin-top: 0.8rem; float: right;">28,16 km</p>
+          </div> 
+        </div>
+      		</div>
+
+
+
+
+      	</div>
+        
+       
+      </div>
+      <p class="font-weight-bold mb-1 mt-3" style="font-size: 110%;clear: left;">Loại phòng</p>
       <div class="info_detail_box" style="width: 100%;">
         <div class="row m-0">
           <style type="text/css">
@@ -116,7 +193,7 @@ p.info_room_detail{
     white-space: nowrap;
   }
             </style>
-          <div class="choose_room_box col-md-4 col-sm-4 col-lg-4 col-xs-12 p-0  mt-1">                      
+          <div class="choose_room_box col-md-4 col-sm-6 col-lg-4 col-xs-12 p-0  mt-1">                      
                     <div class="type_room_box_row m-0 p-1" style="border-radius: 8px;border:1px solid #fff;display: flex;">                   
                       <div style="width: 35%;">
                           <img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 5px;"> 
@@ -141,7 +218,7 @@ p.info_room_detail{
 
 
 
-                  <div class="choose_room_box col-md-4 col-sm-4 col-lg-4 col-xs-12 p-0  mt-1">                      
+                  <div class="choose_room_box col-md-4 col-sm-6 col-lg-4 col-xs-12 p-0  mt-1">                      
                     <div class="type_room_box_row m-0 p-1" style="border-radius: 8px;border:1px solid #fff;display: flex;">                   
                       <div style="width: 35%;">
                           <img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 5px;"> 
@@ -167,7 +244,7 @@ p.info_room_detail{
 
 
 
-                  <div class="choose_room_box col-md-4 col-sm-4 col-lg-4 col-xs-12 p-0  mt-1">                      
+                  <div class="choose_room_box col-md-4 col-sm-6 col-lg-4 col-xs-12 p-0  mt-1">                      
                     <div class="type_room_box_row m-0 p-1" style="border-radius: 8px;border:1px solid #fff;display: flex;">                   
                       <div style="width: 35%;">
                           <img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 5px;"> 
@@ -198,8 +275,89 @@ p.info_room_detail{
       </div>
 
 
-      <p class="font-weight-bold mb-1 mt-3" style="font-size: 110%">Đánh giá</p>
-      <div class="info_detail_box" style="width: 100%;height: 200px;background: pink;"></div>
+      <p class="font-weight-bold mb-1 mt-2" style="font-size: 110%">Đánh giá</p>
+      <div class="info_detail_box mt-3" style="width: 100%;height: 300px;">
+        <div class="info_detail mt-1" style="width: 100%; height: 80px;">
+          <div class="ima" style=" float: left; width: 60px; height: 80px;">
+                <img src="img/room/slide1.jpg" style=" width: 50px; height: 50px;border-radius: 50%">  
+          </div>
+          <div class="comment" style="width: 100%;height: 80px;">
+            <p style=" font-weight:bold">HuyenTrang</p>
+            <p style="font-size:15px; margin-top: -1rem;">Nội dung bình luận</p>
+            <div class="row">
+            <div class="star mr-2 mb-2" style="width: 10px;height: 12px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+             <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info_detail mt-1" style="width: 100%; height: 80px;">
+          <div class="ima" style=" float: left; width: 60px; height: 80px;">
+                <img src="img/room/slide1.jpg" style=" width: 50px; height: 50px;border-radius: 50%">  
+          </div>
+          <div class="comment" style="width: 100%;height: 80px;">
+            <p style=" font-weight:bold">HuyenTrang</p>
+            <p style="font-size:15px; margin-top: -1rem;">Nội dung bình luận</p>
+            <div class="row">
+            <div class="star mr-2 mb-2" style="width: 10px;height: 12px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+             <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info_detail mt-1" style="width: 100%; height: 80px;">
+          <div class="ima" style=" float: left; width: 60px; height: 80px;">
+                <img src="img/room/slide1.jpg" style=" width: 50px; height: 50px;border-radius: 50%">  
+          </div>
+          <div class="comment" style="width: 100%;height: 80px;">
+            <p style=" font-weight:bold">HuyenTrang</p>
+            <p style="font-size:15px; margin-top: -1rem;">Nội dung bình luận</p>
+            <div class="row">
+            <div class="star mr-2 mb-2" style="width: 10px;height: 12px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+             <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            <div class="star mr-2 mb-2" style="width: 10px;margin-top: -1rem;">
+              <img src="img/icon/icon_star.svg" width="140%">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
  </div>
 </body>
