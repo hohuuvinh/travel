@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body style="overflow-x: hidden;">
+	<style type="text/css">
+		/* menu */
+.menu{
+   -webkit-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+-moz-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+   background: #fff;
+   position: fixed;
+   z-index: 99999;
+   height: 60px;
+}
+.menu nav{ 
+  width: 100%;
+}
+ .menu label.logo{
+  color: black;
+  font-size: 35px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+ .menu nav ul{
+  float: right;
+  margin-right: 20px;
+}
+ .menu nav ul li{
+  display: inline-block;
+  margin: 18px 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  padding: 7px 10px;
+  border-radius: 3px;
+
+}
+a:hover{
+  opacity: 0.8;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    display: none;
+  }
+  nav ul li a{
+    float: left;
+    color: #Fff;
+    text-align: center;
+  }
+  
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  .menu nav ul {
+   padding: 0;
+   padding-top: 2rem;
+  }
+  .menu ul{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #2c3e50;
+    
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  .menu nav ul li{
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+  }
+  .menu nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+/* hình ảnh và tiêu đề */
+.ima-big{
+   width:auto;
+   height: 350px;
+   margin: 1rem;
+}
+.ima-big img{
+   width: 100%;
+   height: 100%;
+   border-radius: 0.5rem;
+}
+.ima-small{
+   width: auto;
+   height: 150px;
+   margin-top: 0.5rem;
+}
+.ima-small img{
+   width: 100%;
+   height: 100%;
+} 
+.content h5{
+   margin-top: 0.7rem;
+}
+.content2 p{
+   color: red;
+   font-size: 12px;
+   margin-left: 1rem;
+   margin-top: 0.6rem;
+   font-weight: bold;  
+}
+.content3 p{
+   font-size: 12px;
+}
+.content4 p{
+   font-size: 12px;
+   margin-top: 3.7rem;
+}
+/* thanh chọn thông tin nơi ở và đánh giá */
+.menu1 ul li{
+   display:inline;  
+   border-radius: 1rem; 
+   width: 50%;
+   background: #BAD2DD;
+} 
+.menu1 li a{
+   font-size:15px; 
+   font-weight:bold;
+   color:#14417F;
+   margin-left: 1.2rem;
+   margin-right: 1.2rem;
+   text-align:center;
+}
+.menu1 ul li:hover{
+   background:#80A4BD;
+}
+
+/* thông tin nơi ở */
+.content6{  
+   height: 100px;
+   border: 1px solid black;
+   font-size: 15px;
+}
+
+/* loại phòng */
+.btn1 .btn{
+   background:#B2582C; 
+   width: 65px; 
+   height: 30px; 
+   font-size: 70%; 
+   color: white;
+}
+.btn2 .btn{
+   float: left;
+   margin-left: 0.8rem; 
+   background: orange; 
+   width: 65px; 
+   height: 30px;  
+   font-size: 70%; 
+   color: white;
+}
+/* có thể bạn quan tâm */
+
+.item {
+    height: auto;
+    background-color: #fff;
+    float: left;
+    display: block;
+    border: 1px solid #e4e4e4;
+    box-shadow: 0 0 10px #eaecee;
+    margin-bottom: 2rem;
+    padding-bottom: 12px;
+    border-radius: 8px;
+}
+.item:hover {
+   transition: box-shadow .25s;
+     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.19);
+    border-color: #37b3df;
+}
+.box_post_slide{
+   width: auto;
+   border-radius:8px;
+}
+.img_post{
+   width: 100%;
+   height: 200px;
+}
+.img_post .img{
+   border-top-right-radius: 8px;
+   border-top-left-radius: 8px;
+}
+.address{
+   margin-top: -2rem;
+   margin-left: 0.5rem;
+}
+.rate_post{
+   width: 100%;
+   height: 17.5px;
+   display: flex;
+   padding-left: 8px;
+   margin-top: 4px;
+}
+.line{
+   width: 70px;
+   height: 1px;
+   position: relative;
+   margin-top: -25px;
+   margin-left: 5px;
+   background: black;
+}
+/* thông tin đặt phòng */
+.calendar_box{
+   width: 315px;
+   height: 40px;
+   display: flex;
+   background: #F4FAFF;
+   border-radius: 10px;
+}
+.number-guests{
+   width: 100%;
+/*  background: red; */
+   height: 35px;
+   margin-top: 1rem;
+}
+.number-guests .form-control {
+   width: 25%;
+   float: right;
+   margin-right: 0.2rem;
+   height: 35px;
+}
+.btn3 .btn{
+   float: left;
+   margin-left: 3.8rem; 
+   background: #B2582C; 
+   width: 200px; 
+   height: 35px;  
+   font-size: 90%; 
+   color: white;
+}
+
+.type_room{
+	      		height: 22px;padding: 0.24rem;border-radius: 3px;
+	      	}
+	      	.type_room p{
+	      		font-size: 59%;color: #fff;
+	      	}
+p.title_room_choose{
+    -webkit-box-orient: vertical;
+	font-size: 1rem;
+    margin-bottom: 0;
+    display: -webkit-box;
+    max-height: 52px;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+p.info_room_detail{
+	overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+	}
+@media (max-width: 574px){
+	.choose_room_box{
+		padding-right: 0 !important;
+	}
+}
+
+	</style>
+
+	<div class="menu_main container-fluid p-0" style="height: 60px;">
+		
+
+		<div class="menu" style="width: 100%;">
+    	<nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">TraveIcon</label>
+      <ul>
+        <li><a href="#" style="text-decoration: none;">Thuê khách sạn</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Resort</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Tour</a></li>
+        <li><a href="#" style="text-decoration: none;">Xe đưa đón</a></li>
+        <li><a href="#" style="text-decoration: none;">Đăng nhập</a></li>
+      </ul>
+    </nav>
+    </div>
+
+	</div>
+
+	<div class="container-fluid mt-3">
+		<div class="row m-0">
+
+			<div class="col-md-9 col-sm-12 col-xs-12 p-0">
+
+				<div class="row m-0">
+					<div class="col-md-6 col-sm-12 col-xs-12 p-0" >
+					<div class="row m-0">
+                            <div class="ima-big m-0" style="width: 100%">
+                                <img src="img/post/IMG_7423.jpg">
+                            </div>
+                            <div class="col-md-4 p-0"> 
+                                 <div class="ima-small">
+                                    <img src="img/post/IMG_7423.jpg">
+                                 </div>
+                            </div>
+                             <div class="col-md-4 p-0" > 
+                                 <div class="ima-small">
+                                    <img src="img/post/IMG_7423.jpg">
+                                  </div>
+                            </div>
+                             <div class="col-md-4 p-0" > 
+                                 <div class="ima-small">
+                                    <img src="img/post/IMG_7423.jpg">
+                                  </div>
+                            </div>
+
+                            
+                        </div>
+				</div>
+
+
+				<div class="col-md-6 col-sm-12 col-xs-12 pl-4">
+					<div class="content">
+                        <p class="mb-1" style="font-size: 150%;font-weight: bold;line-height: 28px">Vivian's House Vinhome Dcapital Trần Duy Hưng 1BRL</p>
+                    </div> 
+                    <div class="content1">
+                        <a href="#" style="color: #b2582c;text-decoration: none;font-size: 80% "><span> 11B Trần Hưng Đạo, Hải Châu, Đà Nẵng.</span></a> 
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="ft-item" style=" margin-left: 0.9rem;">
+                     	<div class="box_star float-left" style="display: flex;width: 100%;">
+        <div class="star mr-2 mb-2" style="width: 10px;height: 12px;margin-top: -5px;">
+          <img src="img/icon/icon_star.svg" width="140%">
+        </div>
+        <div class="star mr-2 mb-2" style="width: 10px;margin-top: -5px;">
+          <img src="img/icon/icon_star.svg" width="140%">
+        </div>
+        <div class="star mr-2 mb-2" style="width: 10px;margin-top: -5px;">
+          <img src="img/icon/icon_star.svg" width="140%">
+        </div>
+        <div class="star mr-2 mb-2" style="width: 10px;margin-top: -5px;">
+          <img src="img/icon/icon_star.svg" width="140%">
+        </div>
+        <div class="star mr-2 mb-2" style="width: 10px;margin-top: -5px;">
+          <img src="img/icon/icon_star.svg" width="140%">
+        </div>
+         
+        </div>
+                    	</div>
+                    	
+                        <div class="content2">
+                        	<p class="review_text ml-3 mb-2" style="font-size: 80%;margin-top: 0px;color: black;">4,4 (256)</p>
+                        </div>
+                    </div>
+
+                    <div class="content3">
+                        <p class="mt-1" style="font-size: 95%">Tất cả các loại phòng nghỉ dưỡng, từ phòng Superior cho đến phòng Suite sang trọng đều được trang bị các tiện nghi hiện đại, phòng tắm đứng hoặc bồn tắm riêng trong từng loại phòng. 
+                        		Tất cả các loại phòng nghỉ dưỡng, từ phòng Superior cho đến phòng Suite sang trọng đều được trang bị các tiện nghi hiện đại, phòng tắm đứng hoặc bồn tắm riêng trong từng loại phòng. Khách sạn cách chùa Cầu ở ngay trung tâm phố cổ chỉ 3 phút đi bộ. Lang thang trên những con phố, bạn sẽ có dịp đắm mình trong di sản văn hóa và những điểm tham quan hấp dẫn, chợ đêm, cửa hàng, quán bar, nhà hàng và các cửa hàng thời trang. </p>
+                    </div>
+
+                    
+
+				</div>
+				</div>
+
+<!-- thanh chọn thông tin nơi ở và đánh giá -->				
+				
+
+<!-- thong tin nơi ở -->				
+				
+				<div class="row m-0">			
+				<div class="col-sm-12 col-md-8 p-0 mt-2 pr-2">
+					<p class="mb-0" style="font-size: 140%;font-weight: bold;">Thông tin nơi ở</p>
+                	<p> Đây là phần thông tin nơ ở...mô tả khác sạt,...muốn ghi cái gì thì ghi, nên mình để trống </p>
+                </div>
+                <div class="col-sm-12 col-md-4 p-0 mt-2">
+					<p class="mb-0" style="font-size: 140%;font-weight: bold;">Đánh giá</p>
+                	<p> Đây là phần thông tin nơ ở...mô tả khác sạt,...muốn ghi cái gì thì ghi, nên mình để trống </p>
+                </div>
+                </div>	
+<!-- loại phòng -->	
+				<div class="content7" style="margin-top: 1rem;">
+					<p class="mb-0" style="font-size: 140%;font-weight: bold;">Loại phòng</p>
+				</div>
+
+				<style type="text/css">
+							.type_room_box_row:hover{
+								border:1px solid #b2582c !important;
+								transition: 0.6s;
+							}
+						</style>
+
+				<div class="row m-0">
+					
+					<div class="choose_room_box col-md-4 col-sm-4 col-lg-4 col-xs-12 p-0 pr-2 mt-1">											
+                		<div class="type_room_box_row m-0 p-1" style="border-radius: 8px;border:1px solid #fff;display: flex;">              			
+                  		<div style="width: 35%;">
+                      		<img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 5px;">	
+                 		 </div>
+                 		 <div class="pl-2" style="width: 65%;">
+                     		 <div class="card-title">
+                     		 	<div class="type_room float-left mb-1" style="background: #FF783A;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                     		 	<div class="type_room float-left ml-2 mb-1" style="background: #FFC045;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>                      		
+                          		<a href="#" style="color: black;text-decoration: none; "><p class=" title_room_choose card-text font-weight-bold mb-1" style="font-size: 100%;clear: left;line-height: 18px">Phòng Gường Đôi hoặc 2 Giường Đơn</p></a>
+                          		<a href="#" style="color: #b2582c;text-decoration: none; "><p class="info_room_detail mb-1" style="font-size: 90%; clear: left;font-size: 70%">
+                          			 1 Giường Đơn - 2 người - còn 3 phòng
+                          		</p></a>
+                          		<p class="float-right font-weight-bold mb-0" style="font-size: 110%;margin-top: -2px;">1.230.000 đ</p>
+                     		</div>
+                 		 </div>
+             		 </div>	            		 
+                	</div>
+
+
+                	<div class="choose_room_box col-md-4 col-sm-4 col-lg-4 col-xs-12 p-0 pr-2 mt-1">											
+                		<div class="type_room_box_row m-0 p-1" style="border-radius: 8px;border:1px solid #fff;display: flex;">              			
+                  		<div style="width: 35%;">
+                      		<img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 5px;">	
+                 		 </div>
+                 		 <div class="pl-2" style="width: 65%;">
+                     		 <div class="card-title">
+                     		 	<div class="type_room float-left mb-1" style="background: #FF783A;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                     		 	<div class="type_room float-left ml-2 mb-1" style="background: #FFC045;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>                      		
+                          		<a href="#" style="color: black;text-decoration: none; "><p class=" title_room_choose card-text font-weight-bold mb-1" style="font-size: 100%;clear: left;line-height: 18px">Phòng Gường Đôi hoặc 2 Giường Đơn</p></a>
+                          		<a href="#" style="color: #b2582c;text-decoration: none; "><p class="info_room_detail mb-1" style="font-size: 90%; clear: left;font-size: 70%">
+                          			 1 Giường Đơn - 2 người - còn 3 phòng
+                          		</p></a>
+                          		<p class="float-right font-weight-bold mb-0" style="font-size: 110%;margin-top: -2px;">1.230.000 đ</p>
+                     		</div>
+                 		 </div>
+             		 </div>	            		 
+                	</div>
+
+                	<div class="choose_room_box col-md-4 col-sm-4 col-lg-4 col-xs-12 p-0 pr-2 mt-1">											
+                		<div class="type_room_box_row m-0 p-1" style="border-radius: 8px;border:1px solid #fff;display: flex;">              			
+                  		<div style="width: 35%;">
+                      		<img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 5px;">	
+                 		 </div>
+                 		 <div class="pl-2" style="width: 65%;">
+                     		 <div class="card-title">
+                     		 	<div class="type_room float-left mb-1" style="background: #FF783A;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                     		 	<div class="type_room float-left ml-2 mb-1" style="background: #FFC045;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>                      		
+                          		<a href="#" style="color: black;text-decoration: none; "><p class=" title_room_choose card-text font-weight-bold mb-1" style="font-size: 100%;clear: left;line-height: 18px">Phòng Gường Đôi hoặc 2 Giường Đơn</p></a>
+                          		<a href="#" style="color: #b2582c;text-decoration: none; "><p class="info_room_detail mb-1" style="font-size: 90%; clear: left;font-size: 70%">
+                          			 1 Giường Đơn - 2 người - còn 3 phòng
+                          		</p></a>
+                          		<p class="float-right font-weight-bold mb-0" style="font-size: 110%;margin-top: -2px;">1.230.000 đ</p>
+                     		</div>
+                 		 </div>
+             		 </div>	            		 
+                	</div>
+
+					<div class="choose_room_box col-md-4 col-sm-4 col-lg-4 col-xs-12 p-0 pr-2 mt-1">											
+                		<div class="type_room_box_row m-0 p-1" style="border-radius: 8px;border:1px solid #fff;display: flex;">              			
+                  		<div style="width: 35%;">
+                      		<img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 5px;">	
+                 		 </div>
+                 		 <div class="pl-2" style="width: 65%;">
+                     		 <div class="card-title">
+                     		 	<div class="type_room float-left mb-1" style="background: #FF783A;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>
+                     		 	<div class="type_room float-left ml-2 mb-1" style="background: #FFC045;">
+                     		 		<p>POPULAR</p>
+                     		 	</div>                      		
+                          		<a href="#" style="color: black;text-decoration: none; "><p class=" title_room_choose card-text font-weight-bold mb-1" style="font-size: 100%;clear: left;line-height: 18px">Phòng Gường Đôi hoặc 2 Giường Đơn</p></a>
+                          		<a href="#" style="color: #b2582c;text-decoration: none; "><p class="info_room_detail mb-1" style="font-size: 90%; clear: left;font-size: 70%">
+                          			 1 Giường Đơn - 2 người - còn 3 phòng
+                          		</p></a>
+                          		<p class="float-right font-weight-bold mb-0" style="font-size: 110%;margin-top: -2px;">1.230.000 đ</p>
+                     		</div>
+                 		 </div>
+             		 </div>	            		 
+                	</div>
+
+  				</div>
+
+<!-- có thể bạn quan tâm -->
+				<div class="content8" style="margin-top: 1rem;">
+             		<h5>Có Thể Bạn Quan Tâm</h5>
+             	</div>
+
+             	<div class="row m-0">
+             		<div class="col-md-3 col-sm-6 col-xs-12 bg-warning p-0" style="height: 300px;">
+             			
+             		</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12 bg-secondary p-0">
+             			
+             		</div>
+
+             		<div class="col-md-3 col-sm-6 col-xs-12 bg-warning p-0" style="height: 300px;">
+             			
+             		</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12 bg-secondary p-0">
+             			
+             		</div>
+
+
+             		
+
+             			
+
+             			
+				</div>
+		</div>
+<!-- thông tin đặt phòng -->
+	<div class="col-sm-12 col-md-3 p-0 pl-5" style="height: 100px;position: fixed;margin-left: calc(100vw - 380px);">
+		<div class="info_booking p-2 pl-3 shadow-sm" style="width: 100%;height: 500px;background: #fff;border-radius: 8px;">
+			<p class="font-weight-bold" style="font-size: 120%">Thông tin đặt phòng</p>
+		</div>
+	</div>
+			
+
+	</div>
+</div>
+</body>
+</html>
