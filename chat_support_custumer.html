@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	  <!-- Fontawsome -->
+	  <link rel="stylesheet" type="text/css" href="css/all.css">
+	  <!-- JS -->
+	  <script type="text/javascript"src="js/jquery-3.3.1.slim.min.js"></script>
+	  
+	  <script type="text/javascript"src="js/popper.min.js"></script>
+	  <script type="text/javascript"src="css/bootstrap.min.css"></script>
+	  <script type="text/javascript"src="js/bootstrap.min.js"></script>
+	  <!-- Fontawsome -->
+	  <script type="text/javascript" src="js/all.js"></script>
+	  <link rel="stylesheet" type="text/css" href="slick.css">
+	  <link rel="stylesheet" type="text/css" href="slick-theme.css">
+</head>
+<body style="background: red">
+<style type="text/css">
+		.box{
+
+		}
+		.box img{
+			opacity: 0.8;
+		}
+		.box p{
+			opacity: 0.8;
+			color: black;
+			
+		}
+		.box a{
+			text-decoration: none;
+		}
+		.box:hover{
+			background: transparent;
+		    color: black;
+		    background-color: rgba(237, 237, 238, 1);
+		  	border-radius: 10px;
+		}
+		.box p:hover{
+			 color: black;
+			
+			 
+		}
+		.box img:hover{
+		
+		}
+
+
+
+
+
+
+
+
+
+
+
+.search-box {
+  background: #fafafa;
+  padding: 10px 13px;
+  
+  
+}
+
+input {
+
+
+  
+
+ 
+}
+
+
+  
+  
+  
+  
+
+
+
+
+.chat-bubble {
+	width: 100%;
+  padding: 14px;
+  background: white;
+  margin: 10px 30px;
+  border-radius: 8px;
+  animation: fadeIn 0.6s ease-in;
+  }
+  
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+::-webkit-scrollbar:horizontal { 
+     display: none; 
+ }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FFF6EB;
+}
+::-webkit-scrollbar-track {    
+    background-color: #fff;
+}
+
+.chat-box-tray {
+  background: white;
+  display: flex;
+  align-items: baseline;
+  padding: 10px 15px;
+  align-items: center;
+  margin-top: 19px;
+  bottom: 0;    
+  }
+}
+</style>
+
+<div class="container-fluid bg-dark p-0 mt-5" style="width: 80%;margin: auto;">
+ 
+   <div class="row bg-white m-0">
+   	
+   	<div class="col-lg-5 col-md-5 col-sm-12 p-5" style="height: 550px;">
+   		<!-- -----Search---- -->
+   		<h5 class=" font-weight-bold">Hỗ trợ khách hàng<span class="badge badge-danger ml-2">5</span></h5>
+
+	    
+	        <div class="input-group">
+	            <input class="form-control border-0 bg-light" type="text" value="Tìm kiếm"  style="border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
+	            <span class="input-group-append">
+	                <button class="btn btn-outline-secondary border-0 border bg-light" type="button" style="border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
+	                    <i class="fa fa-search"></i>
+	                </button>
+	              </span>
+	        </div>
+	    
+	    <!-- ----------------- -->
+	    <div class="khung mt-3" style="">
+	    	<div data-spy="scroll" data-target="#myScrollspy" data-offset="10"
+                  style="height:400px;overflow-y: scroll;padding-top: 5px;padding-right: 10px;">
+	    		<a href="#" style="text-decoration: none;">
+	    			<div class="box mb-2" style="width: 100%; padding: 0.5rem">
+						<img src="img/post/IMG_7423.jpg" height="45px" width="45px" style="float:left; margin-right: 1rem; border-radius: 8px;">
+						<p class="font-weight-bold mb-0">Khách hàng 1</p>
+						<p class="mb-0" style="font-size: 14px">Nội dung tin nhắn</p>
+					</div>
+				</a>
+
+				<a href="#" style="text-decoration: none;">
+	    			<div class="box mb-2" style="width: 100%; padding: 0.5rem">
+						<img src="img/post/IMG_7423.jpg" height="45px" width="45px" style="float:left; margin-right: 1rem; border-radius: 8px;">
+						<p class="font-weight-bold mb-0">Khách hàng 1</p>
+						<p class="mb-0" style="font-size: 14px">Nội dung tin nhắn</p>
+					</div>
+				</a>
+
+				<a href="#" style="text-decoration: none;">
+	    			<div class="box mb-2" style="width: 100%; padding: 0.5rem">
+						<img src="img/post/IMG_7423.jpg" height="45px" width="45px" style="float:left; margin-right: 1rem; border-radius: 8px;">
+						<p class="font-weight-bold mb-0">Khách hàng 1</p>
+						<p class="mb-0" style="font-size: 14px">Nội dung tin nhắn</p>
+					</div>
+				</a>
+
+				<a href="#" style="text-decoration: none;">
+	    			<div class="box mb-2" style="width: 100%; padding: 0.5rem">
+						<img src="img/post/IMG_7423.jpg" height="45px" width="45px" style="float:left; margin-right: 1rem; border-radius: 8px;">
+						<p class="font-weight-bold mb-0">Khách hàng 1</p>
+						<p class="mb-0" style="font-size: 14px">Nội dung tin nhắn</p>
+					</div>
+				</a>
+
+	    </div></div>
+   	</div>
+
+   	<div class="col-lg-7 col-md-7 col-sm-12 p-4" style="background: #FFEBCD;" >
+   		<div class="settings-tray">
+			<div class="friend-drawer no-gutters friend-drawer--grey">
+			<img class="profile-image" src="hinh/a1.jpg" alt="">
+			<div class="text">
+			  <h5 class="ml-3 font-weight-bold mb-1">Khách hàng 1</h5>
+			  <p class="text-muted ml-3" style="font-size: 80%"><i class="fas fa-circle mr-1" style="color: #7FFF00; font-size: 8px;margin:1px"></i>Online</p>
+			</div>
+			<span class="settings-tray--right">
+			  <i class="material-icons"></i>
+			</span>
+		  </div>
+		</div>
+
+   		<div class="chat-panel">
+		  </div>
+		 
+		  
+		 
+		  <div class="row m-0" >
+			<div class="col-md-12" style="margin-top: 58%">
+			  <div class="chat-box-tray" style="border-radius: 15px">
+				<input type="text" placeholder="Viết nội dung....." style="outline: none;border: 0;width: 80%">
+				  
+					<a href=""><i class="fas fa-microphone mr-4 ml-1" style="font-size: 16px; color: orange;"></i></a>
+					<a href=""><i class="fas fa-share-alt mr-4" style="font-size: 16px; color: orange"></i></a>
+					<a href=""><i class="fas fa-paper-plane" style="font-size: 16px; color: orange;"></i></a>
+				   
+			  </div>
+			</div>
+		  </div>
+		</div>
+			
+
+   	</div>
+   			
+
+   </div>
+    
+</div>
+
+<script type="text/javascript">
+	$( '.friend-drawer--onhover' ).on( 'click',  function() {
+  
+  $( '.chat-bubble' ).hide('slow').show('slow');
+  
+});
+</script>
+
+</body>
+</html>
