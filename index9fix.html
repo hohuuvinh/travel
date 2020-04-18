@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <!-- Fontawsome -->
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <!-- JS -->
+    <script type="text/javascript"src="js/jquery-3.3.1.slim.min.js"></script>
+    
+    <script type="text/javascript"src="js/popper.min.js"></script>
+    <script type="text/javascript"src="css/bootstrap.min.css"></script>
+    <script type="text/javascript"src="js/bootstrap.min.js"></script>
+    <!-- Fontawsome -->
+    <script type="text/javascript" src="js/all.js"></script>
+    
+</head>
+<body>
+
+
+<style type="text/css">
+     
+.menu{
+/*  -webkit-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+  -moz-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+  box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);*/
+  background: #fff;
+  position: fixed;
+  z-index: 99999;
+  height: 60px;
+}
+.menu nav{ 
+  width: 100%;
+}
+ .menu label.logo{
+  color: black;
+  font-size: 35px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+ .menu nav ul{
+  float: right;
+  margin-right: 20px;
+}
+ .menu nav ul li{
+  display: inline-block;
+  margin: 18px 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  padding: 7px 10px;
+  border-radius: 3px;
+
+}
+a:hover{
+  opacity: 0.8;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1326){
+	 #card-body{
+ 	padding: 10px;
+ } 
+}
+@media (max-width: 952px){
+  label.logo{
+    display: none;
+  }
+  nav ul li a{
+    float: left;
+    color: #Fff;
+    text-align: center;
+  }
+
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  .menu nav ul {
+    padding: 0;
+    padding-top: 2rem;
+  }
+  ul{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #2c3e50;
+    
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+  /*------------Phần css của index9---------------*/
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.khung .box{
+      padding-left: 10px !important;
+
+    }
+    .khung .box img{
+      color: black;
+      margin-left: 0.5rem;
+    }
+    .khung .box p{
+    color: black;    
+    }
+    .khung .box a{
+      text-decoration: none;
+    }
+    .khung .box:hover{
+        background: transparent;     
+        background-color: rgba(255, 125, 161, 0.1); 
+        padding: 1rem;
+        width: 100%;
+        border-left: 5px solid  #ff631c;
+    }
+    .khung .box p:hover{    
+     
+    }
+    .flex span{
+         display: inline-block;
+ 		color: black;
+ 		font-weight: bold;
+ 		font-size: 20px;
+ 	
+          }
+
+  	.flex a {
+  		display: inline-block;
+ 		color: orange;
+ 		text-decoration: none;
+ 		font-size: 12px;
+		}
+	.flex a:hover{
+			text-decoration: none;
+			color: orange;
+		}
+
+
+
+	h6.flex {
+  		display: flex;
+ 		 justify-content: space-between;
+		}
+
+	 .flex1 span{
+         display: inline-block;
+ 		color: black;
+ 		font-weight: bold;
+ 	
+          }
+
+    .flex1 p {
+  		display: inline-block;
+ 		color: black;
+ 		font-weight: bold;
+ 		font-size: 18px;
+ 		position: absolute;
+ 		right: 0;
+		}
+		
+
+
+h6.flex1 {
+  display: flex;
+  justify-content: space-between;
+}
+.avatar {
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+
+    </style>
+
+
+
+  <div class="menu_main container-fluid p-0" style="height: 60px;">
+    
+
+    <div class="menu" style="width: 100%;">
+      <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">TraveIcon</label>
+      <ul>
+        <li><a href="#" style="text-decoration: none;">Thuê khách sạn</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Resort</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Tour</a></li>
+        <li><a href="#" style="text-decoration: none;">Xe đưa đón</a></li>
+        <li><a href="#" style="text-decoration: none;">Đăng nhập</a></li>
+      </ul>
+    </nav>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+ <div class="container-fluid" style="font-family: Helvetica, Arial, sans-serif;">
+
+     <div class="row">
+      
+        <div class="col-lg-3 col-md-3">
+          
+          <div>
+          	<h5 class="ml-4">Thông tin tài khoản</h5>
+
+          </div>
+
+          <div class="" style="width: 100%;">
+            <img class="center rounded-circle" width="150px" height="150px"  src="img/e.jpg" alt="">
+            <div class="text">
+              <h6 class="text-center ml-3 font-weight-bold mt-3" style="font-size: 20px">Khách hàng 1</h6>
+            </div>
+          </div>
+
+          <div class="khung mt-4" style="font-family: Helvetica, Arial, sans-serif;">
+            <div class="box p-1" style="height: 35px">
+              <a href="" style="text-decoration: none;"><img src="img/icon/ic_dashboard_24px.svg" style="float:left; margin-right: 1rem; margin-top: 0.2rem; margin-bottom: 0.1rem ;">
+              <p>Trang tổng quan</p></a>
+            </div>
+
+            <div class="box p-1" style="height: 35px">
+              <a href="" style="text-decoration: none;"><img src="img/icon/ic_date_range_24px.svg" style="float:left; margin-right: 1rem; margin-top: 0.2rem;">
+              <p>Đặt phòng</p></a>
+            </div>
+
+            <div class="box p-1" style="height: 35px">
+              <a href="" style="text-decoration: none;"><img src="img/icon/ic_sms_failed_24px.svg" style="float:left; margin-right: 1rem; margin-top: 0.2rem;">
+              <p>Đánh giá</p></a>
+            </div>
+
+            <div class="box p-1" style="height: 35px">
+              <a href="" style="text-decoration: none;"><img src="img/icon/ic_favorite_24px.svg" style="float:left; margin-right: 1rem; margin-top: 0.2rem;">
+              <p>Yêu thích</p></a>
+            </div>
+
+            <div class="box p-1" style="height: 35px">
+              <a href="" style="text-decoration: none;"><img src="img/icon/ic_settings_24px.svg" style="float:left; margin-right: 1rem; margin-top: 0.2rem;">
+              <p>Cài đặt</p></a>
+            </div>
+
+            <div class="box p-1" style="height: 35px">
+              <a href="" style="text-decoration: none;"><img src="img/icon/ic_pan_tool_24px.svg" style="float:left; margin-right: 1rem; margin-top: 0.1rem; margin-bottom: 0.2rem ;">
+              <p>Trợ giúp</p></a>
+            </div>
+
+            <div class="box p-1" style="height: 35px">
+              <a href="" style="text-decoration: none;"><img src="img/icon/ic_cloud_download_24px.svg" style="float:left; margin-right: 0.8rem; margin-top: 0.2rem;">
+              <p>Tải ứng dụng</p></a>
+            </div>
+
+           </div>  
+
+        </div>
+
+            <!-- ----------------------------------- -->
+
+         <div class="col-lg-9 col-md-9 p-3 bg-dark">
+           
+         
+         	<div class="row">
+        <div class="col-lg-8 col-md-8 ">
+          <div class="row">
+           <div class="col-lg-6 col-md-6">
+              <div class="bg-white mt-2 mb-4 p-3" style="border-radius: 10px;">
+                <p class="card-text font-weight-bold" style="height: 8px; font-size: 20px">Số lần đặt</p>
+                <p class="card-text font-weight-bold" style="font-size: 28px; height: 24px">130</p>
+                <p class="card-text" style="font-size: 12px; color: orange">Tăng 10 lần so với tháng trước</p>
+             </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="bg-white mt-2 mb-4 p-3" style="border-radius: 10px;">
+                <p class="card-text font-weight-bold" style="height: 8px; font-size: 20px">Số lần đặt</p>
+                <p class="card-text font-weight-bold" style="font-size: 28px; height: 24px">130</p>
+                <p class="card-text" style="font-size: 12px; color: orange">Tăng 10 lần so với tháng trước</p>
+             </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-3 " style="border-radius: 10px; width: 100%; height: 500px">
+           
+              <div>
+				<h6 class="flex">
+				  <span>Thông tin phòng đặt</span>
+				  <a href="#">Đặt ở đây<i class="fas fa-caret-down ml-1"></i></a>
+				</h6>
+             </div>
+            
+             <div class="card mb-3 border-0">
+			  <div class="row no-gutters">
+			    <div class="col-md-2">
+			      <img src="img/a3.jpg"  class="card-img" style="border-radius: 10px" alt="...">
+			    </div>
+			    <div class="col-md-10 pl-2" id="card-body">
+			      
+			        <h5 class="card-title" style="font-size: 18px; width: 80%;">Phòng giường đôi hoặc hai giường đơn
+			        	<a href=""><i class="fas fa-edit" style="position: absolute; right: 0; top: 0"></i>
+			        	<i class="fas fa-ellipsis-h float-right" style="position: absolute; right: 25; top: 0"></i></a>
+			        </h5>
+			        <h6 class="flex1">
+				  		<span style="font-size: 12px; color: orange">Đặt phòng thành công</span>
+				  		<p style="position: absolute; right: 0; bottom: 0">1.300.000</p>
+					</h6>
+			      
+			    </div>
+			  </div>
+			</div>
+
+			 
+             <div class="card mb-3 border-0">
+			  <div class="row no-gutters">
+			    <div class="col-md-2">
+			      <img src="img/a3.jpg"  class="card-img" style="border-radius: 10px" alt="...">
+			    </div>
+			    <div class="col-md-10 pl-2" id="card-body">
+			      
+			        <h5 class="card-title" style="font-size: 18px; width: 80%;">Phòng giường đôi hoặc hai giường đơn
+			        	<a href=""><i class="fas fa-edit" style="position: absolute; right: 0; top: 0"></i>
+			        	<i class="fas fa-ellipsis-h float-right" style="position: absolute; right: 25; top: 0"></i></a>
+			        </h5>
+			        <h6 class="flex1">
+				  		<span style="font-size: 12px; color: orange">Đặt phòng thành công</span>
+				  		<p style="position: absolute; right: 0; bottom: 0">1.300.000</p>
+					</h6>
+			      
+			    </div>
+			  </div>
+			</div>
+
+			
+             <div class="card mb-3 border-0">
+			  <div class="row no-gutters">
+			    <div class="col-md-2">
+			      <img src="img/a3.jpg"  class="card-img" style="border-radius: 10px" alt="...">
+			    </div>
+			    <div class="col-md-10 pl-2" id="card-body">
+			      
+			        <h5 class="card-title" style="font-size: 18px; width: 80%;">Phòng giường đôi hoặc hai giường đơn
+			        	<a href=""><i class="fas fa-edit" style="position: absolute; right: 0; top: 0"></i>
+			        	<i class="fas fa-ellipsis-h float-right" style="position: absolute; right: 25; top: 0"></i></a>
+			        </h5>
+			        <h6 class="flex1">
+				  		<span style="font-size: 12px; color: orange">Đặt phòng thành công</span>
+				  		<p style="position: absolute; right: 0; bottom: 0">1.300.000</p>
+					</h6>
+			      
+			    </div>
+			  </div>
+			</div>
+
+
+
+
+
+          </div>  
+        </div>
+
+
+         <div class="col-lg-4 col-md-4">
+             <div class="bg-white mt-2 mb-4 p-3" style="border-radius: 10px;">
+                <p class="card-text font-weight-bold" style="height: 8px; font-size: 20px">Số lần đặt</p>
+                <p class="card-text font-weight-bold" style="font-size: 24px; height: 24px">130</p>
+                <p class="card-text" style="font-size: 12px; color: orange">Tăng 10 lần so với tháng trước</p>
+             </div>
+
+             <div class="bg-white mt-4 p-3" style="border-radius: 10px; height: 500px">
+             	<h6 style="font-size: 20px; font-weight: bold">Đánh giá của bạn</h6>
+
+             		  <div class="card border-0 mt-2">
+					  <div class="row no-gutters">
+					    <div class="col-lg-3 col-md-3">
+					      <img src="img/avatar.png" alt="Avatar" class="avatar">
+					    </div>
+					    <div class="col-lg-9 col-md-9 ">
+					    
+					        <h5 class="card-title" style="font-size: 18px;  font-weight: bold">Khách hàng</h5>
+					        <p class="card-text" style="font-size: 12px;">Nội dung bình luận</p>
+					       <div class="card-text" id="hidden">
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       </div>
+					     
+					    </div>
+					  </div>
+					</div>
+
+					 <div class="card border-0 mt-2">
+					  <div class="row no-gutters">
+					    <div class="col-lg-3 col-md-3">
+					      <img src="img/avatar.png" alt="Avatar" class="avatar">
+					    </div>
+					    <div class="col-lg-9 col-md-9 ">
+					    
+					        <h5 class="card-title" style="font-size: 18px;  font-weight: bold">Khách hàng</h5>
+					        <p class="card-text" style="font-size: 12px; ">Nội dung bình luận</p>
+					       <div class="card-text" id="hidden">
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       </div>
+					     
+					    </div>
+					  </div>
+					</div>
+
+					 <div class="card border-0 mt-2">
+					  <div class="row no-gutters">
+					    <div class="col-lg-3 col-md-ư">
+					      <img src="img/avatar.png" alt="Avatar" class="avatar">
+					    </div>
+					    <div class="col-lg-9 col-md-9 ">
+					    
+					        <h5 class="card-title" style="font-size: 18px; font-weight: bold">Khách hàng</h5>
+					        <p class="card-text" style="font-size: 12px;">Nội dung bình luận</p>
+					       <div class="card-text" id="hidden">
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       	<i class="fas fa-star" style="font-size: 10px; color: orange;"></i>
+					       </div>
+					     
+					    </div>
+					  </div>
+					</div>
+
+             </div>
+           
+         </div>
+
+      </div>
+         
+
+           
+          </div>
+
+
+        
+
+     </div>
+</div> 
+    
+</body>
+</html>
