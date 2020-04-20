@@ -208,11 +208,26 @@ h6.flex1 {
   border-radius: 50%;
 }
 
-.info_account_box p,.icon_function p,.image_book_box p,.dash_analist p{
+.info_account_box p,.icon_function p,.image_book_box p,.dash_analist p,p.social_text,p.social_link,p.question_text{
   overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
+p.social_note,.question{
+    -webkit-box-orient: vertical;
+  font-size: 1rem;
+    margin-bottom: 0;
+    display: -webkit-box;
+    max-height: 52px;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.question.tow{
+    -webkit-line-clamp: 2;
+
+}
+    </style>
     </style>
 
 
@@ -399,10 +414,11 @@ h6.flex1 {
 
             <!-- ----------------------------------- -->
 
-         <div class="col-9 p-0" style="">
+         <div class="col-lg-9 col-md-9 p-0" style="">
            
          
-         	
+        
+        
 
 
 
@@ -410,25 +426,31 @@ h6.flex1 {
 
           <div class="row m-0">
             <div class="col-9 p-2">
-          <div class="bg-white p-3 " style="border-radius: 10px; width: 100%; height: 610px">
+          <div class="bg-white p-3 " style="border-radius: 10px; width: 100%; height: 575px">
            
               <div>
 				<div class="flex">
-				  <p class="float-left font-weight-bold mb-0" style="font-size: 150%">Thông tin liên hệ</p>
+				  <p class="float-left font-weight-bold mb-0" style="font-size: 120%">Thông tin phòng đặt</p>
+				  
 				</div>
              </div>
-
             <div style="clear: left;"></div>
 
-             <div class="row m-0 mt-4">
-               <div class="image_book_box" style="width: 10%;height: 40px;background: white;">
-                 <img src="img/Icon/Group 345a.svg" width="100%" height="100%" style="border-radius: 8px">
+             <div class="row m-0 mt-2">
+               <div class="image_book_box" style="width: 8%;height: 40px;background: white;">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 63.023 58.112">
+  <g id="Group_345" data-name="Group 345" transform="translate(-707.92 -448.9)">
+    <path id="ic_sms_failed_24px" d="M46,2H6.889A4.883,4.883,0,0,0,2.024,6.889L2,50.891l9.778-9.778H46a4.9,4.9,0,0,0,4.889-4.889V6.889A4.9,4.9,0,0,0,46,2ZM28.89,31.335H24V26.446H28.89Zm0-9.778H24V11.778H28.89Z" transform="translate(705.92 456.121)" fill="#ff631c"/>
+    <circle id="Ellipse_33" data-name="Ellipse 33" cx="12" cy="12" r="12" transform="translate(746.943 448.9)" fill="#5f7beb"/>
+    <path id="Path_127" data-name="Path 127" d="M742.343,457.915l3.984,4.781,5.711-8.367" transform="translate(11.826 1.688)" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>
                </div>
-               <div class="image_book_box pl-2" style="width: 60%;height: 80px;">
+               <div class="image_book_box pl-2" style="width: 60%;height: 60px;">
                  <p class="mb-0 font-weight-bold" style="font-size: 100%">Liên hệ qua tin nhắn (Ưu tiên)</p>
                  <p class="mb-0" style="font-size: 80%">Bạn sẽ được hỗ trợ khi nhắn tin trực tiếp</p>
                </div>
-               <div class="image_book_box" style="width: 30%;height: 80px;">
+               <div class="image_book_box" style="width: 30%;height: 60px;">
                  <div class="tool_book_box" style="width: 100%;height: 40px;">
                    <a href=""><div class="btn float-right pt-2" style="background: #ff631c; color: white; width: 90%;height: 100%;font-size: 90%">Nhắn tin tại đây</div></a>
                  </div>
@@ -437,14 +459,20 @@ h6.flex1 {
 
 
              <div class="row m-0">
-               <div class="image_book_box" style="width: 10%;height: 40px;background: white;">
-                 <img src="img/Icon/Group 345b.svg" width="100%" height="100%" style="border-radius: 8px">
+               <div class="image_book_box" style="width: 8%;height: 40px;background: white;">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 64.539 56.653">
+  <g id="Group_345" data-name="Group 345" transform="translate(-706.404 -448.9)">
+    <path id="ic_perm_phone_msg_24px" d="M47.57,35.772a29.784,29.784,0,0,1-9.36-1.494,2.676,2.676,0,0,0-2.674.629l-5.768,5.768A39.522,39.522,0,0,1,12.491,23.424l5.768-5.794a2.574,2.574,0,0,0,.655-2.648,29.784,29.784,0,0,1-1.494-9.36A2.629,2.629,0,0,0,14.8,3H5.622A2.629,2.629,0,0,0,3,5.622a44.566,44.566,0,0,0,44.57,44.57,2.629,2.629,0,0,0,2.622-2.622V38.394A2.629,2.629,0,0,0,47.57,35.772ZM26.6,3V29.218l7.865-7.865H50.192V3Z" transform="translate(703.404 455.361)" fill="#ff631c"/>
+    <circle id="Ellipse_33" data-name="Ellipse 33" cx="12" cy="12" r="12" transform="translate(746.943 448.9)" fill="#5f7beb"/>
+    <path id="Path_127" data-name="Path 127" d="M742.343,457.915l3.984,4.781,5.711-8.367" transform="translate(11.826 1.688)" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>
                </div>
-               <div class="image_book_box pl-2" style="width: 60%;height: 80px;">
+               <div class="image_book_box pl-2" style="width: 60%;height: 60px;">
                  <p class="mb-0 font-weight-bold" style="font-size: 100%">Gọi điện thoại</p>
                  <p class="mb-0" style="font-size: 80%">Bạn sẽ được thực hiện đến tổng đài Travelcon</p>
                </div>
-               <div class="image_book_box" style="width: 30%;height: 80px;">
+               <div class="image_book_box" style="width: 30%;height: 60px;">
                  <div class="tool_book_box" style="width: 100%;height: 40px;">
                    <a href=""><div class="btn float-right pt-2" style="background: #ff631c; color: white; width: 90%;height: 100%;font-size: 90%">123-456-789</div></a>
                  </div>
@@ -453,14 +481,20 @@ h6.flex1 {
 
 
              <div class="row m-0">
-               <div class="image_book_box" style="width: 10%;height: 40px;background: white;">
-                 <img src="img/Icon/Group 345a.svg" width="100%" height="100%" style="border-radius: 8px">
+               <div class="image_book_box" style="width: 8%;height: 40px;background: white;">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 63 47">
+  <g id="Group_355" data-name="Group 355" transform="translate(-531 -245)">
+    <path id="ic_markunread_24px" d="M45.981,4H6.887A4.88,4.88,0,0,0,2.024,8.887L2,38.208a4.9,4.9,0,0,0,4.887,4.887H45.981a4.9,4.9,0,0,0,4.887-4.887V8.887A4.9,4.9,0,0,0,45.981,4Zm0,9.774L26.434,25.991,6.887,13.774V8.887L26.434,21.1,45.981,8.887Z" transform="translate(529 248.905)" fill="#ff631c"/>
+    <circle id="Ellipse_33" data-name="Ellipse 33" cx="12" cy="12" r="12" transform="translate(570 245)" fill="#5f7beb"/>
+    <path id="Path_127" data-name="Path 127" d="M742.343,457.915l3.984,4.781,5.711-8.367" transform="translate(-165.117 -202.212)" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>
                </div>
-               <div class="image_book_box pl-2" style="width: 60%;height: 80px;">
+               <div class="image_book_box pl-2" style="width: 60%;height: 60px;">
                  <p class="mb-0 font-weight-bold" style="font-size: 100%">Liên hệ qua Email</p>
                  <p class="mb-0" style="font-size: 80%">Bạn sẽ được thực hiện hỗ trợ khi gửi email đến chúng tôi </p>
                </div>
-               <div class="image_book_box" style="width: 30%;height: 80px;">
+               <div class="image_book_box" style="width: 30%;height: 60px;">
                  <div class="tool_book_box" style="width: 100%;height: 40px;">
                    <a href=""><div class="btn float-right pt-2" style="background: #ff631c; color: white; width: 90%;height: 100%;font-size: 90%">abc@gmail.com</div></a>
                  </div>
@@ -469,34 +503,24 @@ h6.flex1 {
 
 
             <div class="row m-0">
-               <div class="image_book_box" style="width: 10%;height: 40px;background: white;">
-                 <img src="img/Icon/Group 345.svg" width="100%" height="100%" style="border-radius: 8px">
+               <div class="image_book_box" style="width: 8%;height: 40px;background: white;">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 64.824 61.857">
+  <g id="Group_345" data-name="Group 345" transform="translate(-706.119 -445.043)">
+    <path id="Path_128" data-name="Path 128" d="M11635.905,2501.912c-6.018.117-35.844,3.051-37.369,10.3s-1.146,46.9,2.287,49.955,34.7,1.525,40.8-2.67c.381-.762,1.526-39.658,0-45.379s-21.737,4.576-36.99,2.669c0-.382-7.247-6.1,31.269-8.771C11635.144,2508.4,11641.922,2501.794,11635.905,2501.912Z" transform="translate(-10891.563 -2056.868)" fill="#ff631c"/>
+    <circle id="Ellipse_33" data-name="Ellipse 33" cx="12" cy="12" r="12" transform="translate(746.943 448.9)" fill="#5f7beb"/>
+    <path id="Path_127" data-name="Path 127" d="M742.343,457.915l3.984,4.781,5.711-8.367" transform="translate(11.826 1.688)" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>
                </div>
-               <div class="image_book_box pl-2" style="width: 60%;height: 80px;">
+               <div class="image_book_box pl-2" style="width: 60%;height: 60px;">
                  <p class="mb-0 font-weight-bold" style="font-size: 100%">Xem trung tâm trợ giúp</p>
                  <p class="mb-0" style="font-size: 80%">Có thể vấn đề của bạn được đề cập tại đây</p>
                </div>
-               <div class="image_book_box" style="width: 30%;height: 80px;">
+               <div class="image_book_box" style="width: 30%;height: 60px;">
                  <div class="tool_book_box" style="width: 100%;height: 40px;">
                    <a href=""><div class="btn float-right pt-2" style="background: #ff631c; color: white; width: 90%;height: 100%;font-size: 90%">Xem tại đây</div></a>
                  </div>
                </div>
-             </div>
-			 
-             
-
-			
-            
-
-             <style type="text/css">
-               .see_more:hover{
-                  opacity: 0.6;
-               }
-             </style>
-             <div class="row m-0 mt-2">
-              <div class="col-12 p-0">
-                <a href="" style="text-decoration: none;">
-               <p class="see_more text-center" style="color: #FF783A;font-size: 90%">Xem tất cả</p></a></div>
              </div>
 
 
@@ -506,54 +530,59 @@ h6.flex1 {
           </div></div>
 
           <div class="col-3 p-2">
-            <div class="bg-white p-3" style="border-radius: 10px; height: 300px">
-
-              
-                <img src="img/Icon/Group 315v.svg" height="20%">
-                <p class="font-weight-bold mb-1 mt-2" style="font-size: 100%">Liên kết với mạng xã hội</p>
-                <p class="text-justify m-0" style="font-size: 80%">Bạn có thể liên kết với mạng xã hội để có thể chia sẻ những chuyến đi thú vị của mình</p>
-               <a href=""><p style="color: #FF783A;font-size: 80%; font-weight: bold; text-align: justify; ">www.travelcon.com/share-social</p></a>
-              
-                  <div class="ml-3" style="width: 20%;  float: left;">
-                    <img src="img/Icon/Group 356.svg" class="ml-1" width="80%" height="50%">
-                    <p style="font-size: 80%; font-weight: bold;">Google</p>
+            <div class="social_notification_box bg-white p-3" style="width: 100%;height: 283px;border-radius: 10px;">
+            	<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 74 73">
+  <g id="Group_315" data-name="Group 315" transform="translate(0.228 -0.5)">
+    <ellipse id="Ellipse_28" data-name="Ellipse 28" cx="37" cy="36.5" rx="37" ry="36.5" transform="translate(-0.228 0.5)" fill="#fff2ec"/>
+    <path id="Path_122" data-name="Path 122" d="M11278.725,580.739s-8.152.362-8.062,6.613,7.066,7.247,8.063,7.428C11278.814,594.961,11278.725,580.739,11278.725,580.739Z" transform="translate(-11251.206 -552.232)" fill="#ff813f"/>
+    <path id="Path_123" data-name="Path 123" d="M11282.623,580.207s-1.268,17.393,1,19.929,6.884,6.884,7.608,4.982-7.608-9.421-5.072-10.689,14.855,6.613,17.03,4.258v-22.1s-1.177-1.993-3.985-.544-5.034,3.793-15.581,4.167Z" transform="translate(-11252.389 -551.7)" fill="#ff813f"/>
+    <path id="Path_124" data-name="Path 124" d="M11308.8,584.588s4.959,3.838,0,6.912C11308.8,591.524,11308.8,584.588,11308.8,584.588Z" transform="translate(-11255.091 -552.624)" fill="#ff813f"/>
+  </g>
+</svg>
+                <p class="social_text font-weight-bold mb-1 mt-2" style="font-size: 100%">Liên kết với mạng xã hội</p>
+                <p class="social_note text-justify m-0" style="font-size: 80%">Bạn có thể liên kết với mạng xã hội để có thể chia sẻ những chuyến đi thú vị của mình</p>
+               <a href=""><p class="social_link mt-2 mb-2" style="color: #FF783A;font-size: 80%; font-weight: bold; text-align: justify; ">www.travelcon.com/share-social</p></a>
+              <div class="social_icon_box" style="width: 100%;display: flex;">
+                  <div class="social_google" style="width: 33%;">
+                    <div class="social_google_icon" style="width: 45px;height: 45px;">
+                      <img src="img/icon/icon_google.svg" width="100%">
+                    </div>
+                    <p class="mb-0" style="font-size: 90%">Google</p>
                   </div>
-
-                  <div class="ml-3" style="width: 20%;  float: left;">
-                    <img src="img/Icon/Group 357.svg" class="ml-2" width="80%" height="50%">
-                    <p style="font-size: 80%; font-weight: bold;">Facebook</p>
+                  <div class="social_google" style="width: 33%;">
+                    <div class="social_google_icon" style="width: 45px;height: 45px;margin: auto;">
+                      <img src="img/icon/icon_facebook.svg" width="100%">
+                    </div>
+                    <p class="text-center mb-0" style="font-size: 90%">Facebook</p>
                   </div>
-
-
-                  <div class="ml-4" style="width: 20%; float: left">
-                    <img src="img/Icon/Group 358.svg"  class="ml-1" width="80%" height="50%">
-                    <p style="font-size: 80%; font-weight: bold;">Twitter</p>
+                  <div class="social_google" style="width: 33%;">
+                    <div class="social_google_icon" style="width: 45px;height: 45px;float: right;">
+                      <img src="img/icon/icon_tewter.svg" width="100%">
+                    </div>
+                    <p class="float-right mb-0" style="font-size: 90%">Google</p>
                   </div>
-
-
-           
+                  </div>
             </div>
-
-
-
-             <div class="bg-white p-3" style="border-radius: 10px; height: 300px; margin-top: 10px">
-               <img src="img/Icon/Group 315b.svg" height="20%">
-               <p class="font-weight-bold mb-1 mt-2" style="font-size: 100%">Câu hỏi thường gặp</p>
+             <div class="social_notification_box bg-white mt-2 p-3" style="width: 100%;height: 283px;border-radius: 10px;">
+             	 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 74 73">
+  <g id="Group_315" data-name="Group 315" transform="translate(0.228 -0.5)">
+    <ellipse id="Ellipse_28" data-name="Ellipse 28" cx="37" cy="36.5" rx="37" ry="36.5" transform="translate(-0.228 0.5)" fill="#fff2ec"/>
+    <path id="Path_125" data-name="Path 125" d="M11619.894,2501.911c-3.5.068-20.828,1.773-21.715,5.983s-.666,27.255,1.329,29.028,20.165.886,23.71-1.551c.222-.443.887-23.045,0-26.368s-12.631,2.659-21.494,1.551c0-.222-4.211-3.545,18.17-5.1C11619.451,2505.678,11623.39,2501.843,11619.894,2501.911Z" transform="translate(-11574.229 -2483.5)" fill="#ff813f"/>
+  </g>
+</svg>
+               <p class="question_text font-weight-bold mb-1 mt-2" style="font-size: 100%">Câu hỏi thường gặp</p>
                 <ul class="p-0 m-0 ml-3">
-                  <a href="" style="color: black"><li style="font-size: 80%">Làm sao để đặt phòng trên Travelcon</li></a>
-                   <a href="" style="color: black"><li style="font-size: 80%">Hướng dẫn thanh toán bằng thẻ ngân hàng</li></a>
-                    <a href="" style="color: black"><li style="font-size: 80%">Tôi muốn nhận thông báo về khuyến mãi</li></a>
+                  <a href="" style="color: black"><li style="font-size: 80%" class="question tow">Làm sao để đặt phòng trên Travelcon</li></a>
+                   <a href="" style="color: black"><li style="font-size: 80%" class="question tow">Hướng dẫn thanh toán bằng thẻ ngân hàng</li></a>
+                    <a href="" style="color: black"><li style="font-size: 80%" class="question tow">Tôi muốn nhận thông báo về khuyến mãi</li></a>
                 </ul>
-                  
-
-           
-            </div>
+             </div>
           </div>
 
            
 
              </div>
-          </div>
+         
            </div> 
         </div>
 

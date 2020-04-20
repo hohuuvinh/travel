@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <!-- Fontawsome -->
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <!-- JS -->
+    <script type="text/javascript"src="js/jquery-3.3.1.slim.min.js"></script>
+    
+    <script type="text/javascript"src="js/popper.min.js"></script>
+    <script type="text/javascript"src="css/bootstrap.min.css"></script>
+    <script type="text/javascript"src="js/bootstrap.min.js"></script>
+    <!-- Fontawsome -->
+    <script type="text/javascript" src="js/all.js"></script>
+    
+</head>
+<body style="background: #FAEEDE">
+
+
+<style type="text/css">
+     
+.menu{
+/*  -webkit-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+  -moz-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+  box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);*/
+  background: #fff;
+  position: fixed;
+  z-index: 99999;
+  height: 60px;
+}
+.menu nav{ 
+  width: 100%;
+}
+ .menu label.logo{
+  color: black;
+  font-size: 35px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+ .menu nav ul{
+  float: right;
+  margin-right: 20px;
+}
+ .menu nav ul li{
+  display: inline-block;
+  margin: 18px 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  padding: 7px 10px;
+  border-radius: 3px;
+
+}
+a:hover{
+  opacity: 0.8;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1326){
+	 #card-body{
+ 	padding: 10px;
+ } 
+}
+@media (max-width: 952px){
+  label.logo{
+    display: none;
+  }
+  nav ul li a{
+    float: left;
+    color: #Fff;
+    text-align: center;
+  }
+
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  .menu nav ul {
+    padding: 0;
+    padding-top: 2rem;
+  }
+  ul{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #2c3e50;
+    
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+  /*------------Phần css của index9---------------*/
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.khung .box{
+      padding-left: 10px !important;
+
+    }
+    .khung .box img{
+      color: black;
+      margin-left: 0.5rem;
+    }
+    .khung .box p{
+    color: black;    
+    }
+    .khung .box a{
+      text-decoration: none;
+    }
+    .khung .box:hover{
+        background: transparent;     
+        background-color: rgba(255, 125, 161, 0.1); 
+        padding: 1rem;
+        width: 100%;
+        border-left: 5px solid  #ff631c;
+    }
+    .khung .box p:hover{    
+     
+    }
+    .flex span{
+         display: inline-block;
+ 		color: black;
+ 		font-weight: bold;
+ 		font-size: 20px;
+ 	
+          }
+
+  	.flex a {
+  		display: inline-block;
+ 		color: orange;
+ 		text-decoration: none;
+ 		font-size: 12px;
+		}
+	.flex a:hover{
+			text-decoration: none;
+			color: orange;
+		}
+
+
+
+	h6.flex {
+  		display: flex;
+ 		 justify-content: space-between;
+		}
+
+	 .flex1 span{
+         display: inline-block;
+ 		color: black;
+ 		font-weight: bold;
+ 	
+          }
+
+    .flex1 p {
+  		display: inline-block;
+ 		color: black;
+ 		font-weight: bold;
+ 		font-size: 18px;
+ 		position: absolute;
+ 		right: 0;
+		}
+		
+
+
+h6.flex1 {
+  display: flex;
+  justify-content: space-between;
+}
+.avatar {
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar:horizontal { 
+     display: none; 
+ }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+    </style>
+
+
+
+  <div class="menu_main container-fluid p-0" style="height: 60px;">
+    
+
+    <div class="menu" style="width: 100%;">
+      <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">TraveIcon</label>
+      <ul>
+        <li><a href="#" style="text-decoration: none;">Thuê khách sạn</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Resort</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Tour</a></li>
+        <li><a href="#" style="text-decoration: none;">Xe đưa đón</a></li>
+        <li><a href="#" style="text-decoration: none;">Đăng nhập</a></li>
+      </ul>
+    </nav>
+    </div>
+
+
+
+  </div>
+
+  <div class="container-fluid p-2">
+
+    <div class="row m-0">
+    	<div class="col-12 p-0 " style="background: #FAEEDE">
+      		<div class="cuon table-responsive"> 
+      			<div class="dash_anlist_box mr-2" style="width: 560px;height: 90px;">
+      				<div class="dash_anlist_box float-left mr-2 bg-white p-1 pl-2" style="width: 180px;height: 90px;border-radius: 6px;">
+      					<p class="card-text mb-0 font-weight-bold" style="font-size: 20px">Số lần đặt</p>
+                		<p class="card-text mb-0 font-weight-bold" style="font-size: 28px;margin-top: -5px;">130</p>
+                		<p class="card-text mb-0" style="font-size: 12px; color: #FF783A;margin-top: -5px;">Tăng 10 lần so với tháng trước</p>
+      				</div>
+      				<div class="dash_anlist_box float-left mr-2 bg-white p-1 pl-2" style="width: 180px;height: 90px;border-radius: 6px;">
+      					<p class="card-text mb-0 font-weight-bold" style="font-size: 20px">Số lần đặt</p>
+                		<p class="card-text mb-0 font-weight-bold" style="font-size: 28px;margin-top: -5px;">130</p>
+                		<p class="card-text mb-0" style="font-size: 12px; color: #FF783A;margin-top: -5px;">Tăng 10 lần so với tháng trước</p>
+      				</div>
+      				<div class="dash_anlist_box float-left bg-white p-1 pl-2" style="width: 180px;height: 90px;border-radius: 6px;">
+      					<p class="card-text mb-0 font-weight-bold" style="font-size: 20px">Số lần đặt</p>
+                		<p class="card-text mb-0 font-weight-bold" style="font-size: 28px;margin-top: -5px;">130</p>
+                		<p class="card-text mb-0" style="font-size: 12px; color: #FF783A;margin-top: -5px;">Tăng 10 lần so với tháng trước</p>
+      				</div>
+      			</div>
+      			
+
+      			
+      		</div>
+      
+
+    </div>
+
+
+   <div class="row m-0 mt-2">
+     <div class="col-12 p-0">
+     	<div class="bg-white p-2" style="border-radius: 8px; width: 100%;">
+           
+              <div>
+				<div class="flex">
+				  <p class="float-left font-weight-bold mb-0" style="font-size: 120%">Thông tin phòng đặt</p>
+				  <a class="float-right mb-0 mt-1" href="#">Tất cả<i class="fas fa-caret-down ml-1"></i></a>
+				</div>
+             </div>
+            <div style="clear: left;"></div>
+             <div class="row m-0 mt-2">
+               <div class="image_book_box" style="width: 20%;height: 80px;">
+                 <img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 8px">
+               </div>
+               <div class="image_book_box pl-2" style="width: 55%;height: 80px;">
+                 <p class="mb-0 font-weight-bold" style="line-height: 120%;">Khách sạn Furama Resort</p>
+                 <p style="font-size: 80%">Phòng giường đôi hoặc hai giường đơn</p>
+               </div>
+               <div class="content_book_box" style="width: 25%;height: 80px;">
+                 <div class="tool_book_box" style="width: 100%;height: 20px;">
+                   <img src="img/icon/icon_review.svg" style="float: right;" width="25px">
+                   <img class="mr-2" src="img/icon/icon_setting.svg" style="float: right;"width="25px">
+                 </div>
+                 <div class="tool_book_box pt-1" style="width: 100%;height: 50px;">
+                 	<p class="float-right mb-0" style="font-size: 80%;color: #FF783A">thành công</p>
+                 	<p class="float-right mb-0" style="font-size: 80%;color: #FF783A">24/07/2020</p>
+                   <p class="float-right font-weight-bold">2,200,000đ</p>
+                 </div>
+               </div>
+             </div>
+
+
+             <div class="row m-0 mt-2">
+               <div class="image_book_box" style="width: 20%;height: 80px;background: pink;">
+                 <img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 8px">
+               </div>
+               <div class="image_book_box pl-2" style="width: 55%;height: 80px;">
+                 <p class="mb-0 font-weight-bold" style="line-height: 120%;">Khách sạn Furama Resort</p>
+                 <p style="font-size: 80%">Phòng giường đôi hoặc hai giường đơn</p>
+               </div>
+               <div class="content_book_box" style="width: 25%;height: 80px;">
+                 <div class="tool_book_box" style="width: 100%;height: 20px;">
+                   <img src="img/icon/icon_review.svg" style="float: right;" width="25px">
+                   <img class="mr-2" src="img/icon/icon_setting.svg" style="float: right;"width="25px">
+                 </div>
+                 <div class="tool_book_box pt-1" style="width: 100%;height: 50px;">
+                 	<p class="float-right mb-0" style="font-size: 80%;color: #FF783A">thành công</p>
+                 	<p class="float-right mb-0" style="font-size: 80%;color: #FF783A">24/07/2020</p>
+                   <p class="float-right font-weight-bold">2,200,000đ</p>
+                 </div>
+               </div>
+             </div>
+
+
+             <div class="row m-0 mt-2">
+               <div class="image_book_box" style="width: 20%;height: 80px;background: pink;">
+                 <img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 8px">
+               </div>
+               <div class="image_book_box pl-2" style="width: 55%;height: 80px;">
+                 <p class="mb-0 font-weight-bold" style="line-height: 120%;">Khách sạn Furama Resort</p>
+                 <p style="font-size: 80%">Phòng giường đôi hoặc hai giường đơn</p>
+               </div>
+               <div class="content_book_box" style="width: 25%;height: 80px;">
+                 <div class="tool_book_box" style="width: 100%;height: 20px;">
+                   <img src="img/icon/icon_review.svg" style="float: right;" width="25px">
+                   <img class="mr-2" src="img/icon/icon_setting.svg" style="float: right;"width="25px">
+                 </div>
+                 <div class="tool_book_box pt-1" style="width: 100%;height: 50px;">
+                 	<p class="float-right mb-0" style="font-size: 80%;color: #FF783A">thành công</p>
+                 	<p class="float-right mb-0" style="font-size: 80%;color: #FF783A">24/07/2020</p>
+                   <p class="float-right font-weight-bold">2,200,000đ</p>
+                 </div>
+               </div>
+             </div>
+
+
+             <div class="row m-0 mt-2">
+               <div class="image_book_box" style="width: 20%;height: 80px;background: pink;">
+                 <img src="img/post/IMG_7423.jpg" width="100%" height="100%" style="border-radius: 8px">
+               </div>
+               <div class="image_book_box pl-2" style="width: 55%;height: 80px;">
+                 <p class="mb-0 font-weight-bold" style="line-height: 120%;">Khách sạn Furama Resort</p>
+                 <p style="font-size: 80%">Phòng giường đôi hoặc hai giường đơn</p>
+               </div>
+               <div class="content_book_box" style="width: 25%;height: 80px;">
+                 <div class="tool_book_box" style="width: 100%;height: 20px;">
+                   <img src="img/icon/icon_review.svg" style="float: right;" width="25px">
+                   <img class="mr-2" src="img/icon/icon_setting.svg" style="float: right;"width="25px">
+                 </div>
+                 <div class="tool_book_box pt-1" style="width: 100%;height: 50px;">
+                 	<p class="float-right mb-0" style="font-size: 80%;color: #FF783A">thành công</p>
+                 	<p class="float-right mb-0" style="font-size: 80%;color: #FF783A">24/07/2020</p>
+                   <p class="float-right font-weight-bold">2,200,000đ</p>
+                 </div>
+               </div>
+             </div>
+
+
+             
+
+			 
+             
+
+			
+             
+
+             <style type="text/css">
+               .see_more:hover{
+                  opacity: 0.6;
+               }
+             </style>
+             <div class="row m-0 mt-2">
+              <div class="col-12 p-0">
+                <a href="" style="text-decoration: none;">
+               <p class="see_more text-center mb-0" style="color: #FF783A;font-size: 90%">Xem tất cả</p></a></div>
+             </div>
+
+
+
+
+
+          </div></div></div>
+     </div>
+		      <div class="bg-white p-2 mt-2" style="border-radius: 8px;">
+              <p class="font-weight-bold mb-1" style="font-size: 120%">Đánh giá của bạn</p>
+
+      <div class="info_detail_box mt-2" style="width: 100%;">
+        
+        <div class="info_detail" style="width: 100%;">
+          <div class="ima" style=" float: left; width: 60px; height: 80px;">
+                <img src="img/room/slide1.jpg" style=" width: 50px; height: 50px;border-radius: 50%">  
+          </div>
+          <div class="comment" style="width: 100%;">
+            <p class="mb-0 float-left" style=" font-weight:bold">HuyenTrang</p>
+
+                   <img class="float-right" src="img/icon/icon_review.svg" style="float: right;" width="25px">
+                   <img class="mr-2 float-right" src="img/icon/icon_setting.svg" style=""width="25px">
+               <br>
+            <p class="mb-0" style="font-size:15px;">Nội dung bình luậnvvvvv vvvvvvvvvvvvvvv</p>
+            <div class="row m-0">
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+             <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="info_detail" style="width: 100%;">
+          <div class="ima" style=" float: left; width: 60px; height: 80px;">
+                <img src="img/room/slide1.jpg" style=" width: 50px; height: 50px;border-radius: 50%">  
+          </div>
+          <div class="comment" style="width: 100%;">
+            <p class="mb-0 float-left" style=" font-weight:bold">HuyenTrang</p>
+
+                   <img class="float-right" src="img/icon/icon_review.svg" style="float: right;" width="25px">
+                   <img class="mr-2 float-right" src="img/icon/icon_setting.svg" style=""width="25px">
+               <br>
+            <p class="mb-0" style="font-size:15px;">Nội dung bình luậnvvvvv vvvvvvvvvvvvvvv</p>
+            <div class="row m-0">
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+             <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="info_detail" style="width: 100%;">
+          <div class="ima" style=" float: left; width: 60px; height: 80px;">
+                <img src="img/room/slide1.jpg" style=" width: 50px; height: 50px;border-radius: 50%">  
+          </div>
+          <div class="comment" style="width: 100%;">
+            <p class="mb-0 float-left" style=" font-weight:bold">HuyenTrang</p>
+
+                   <img class="float-right" src="img/icon/icon_review.svg" style="float: right;" width="25px">
+                   <img class="mr-2 float-right" src="img/icon/icon_setting.svg" style=""width="25px">
+               <br>
+            <p class="mb-0" style="font-size:15px;">Nội dung bình luậnvvvvv vvvvvvvvvvvvvvv</p>
+            <div class="row m-0">
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+             <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="info_detail" style="width: 100%;">
+          <div class="ima" style=" float: left; width: 60px; height: 80px;">
+                <img src="img/room/slide1.jpg" style=" width: 50px; height: 50px;border-radius: 50%">  
+          </div>
+          <div class="comment" style="width: 100%;">
+            <p class="mb-0 float-left" style=" font-weight:bold">HuyenTrang</p>
+
+                   <img class="float-right" src="img/icon/icon_review.svg" style="float: right;" width="25px">
+                   <img class="mr-2 float-right" src="img/icon/icon_setting.svg" style=""width="25px">
+               <br>
+            <p class="mb-0" style="font-size:15px;">Nội dung bình luậnvvvvv vvvvvvvvvvvvvvv</p>
+            <div class="row m-0">
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+             <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            <div class="star mr-1 mb-2" style="width: 10px;">
+              <img src="img/icon/icon_star.svg" width="100%">
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row m-0">
+              <div class="col-12 p-0">
+                <a href="" style="text-decoration: none;">
+               <p class="see_more text-center mb-0" style="color: #FF783A;font-size: 90%">Xem tất cả</p></a></div>
+             </div>
+
+      </div>
+                  
+
+           
+            </div>
+
+ 
+</div> 
+    
+</body>
+</html>
