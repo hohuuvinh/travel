@@ -26,33 +26,32 @@
 			height: 30px;
 		}
 		.info_detail{
-			margin-top: 2rem; 
+			margin-top: 0.5rem; 
 			width: 100%; 
 			height: 70px;
 		}
 		.info_detail .ima{
-			width: 20%; 
+			width: 70px; 
 			height: 70px; 
 			float: left;
 		}
 		.ima img{
-			width: 70%; 
-			height: 70px;  
+			width: 100%; 
+			height: 100%;  
 			border-radius: 50%;
-			margin-left: 0.8rem;
+		
 		}
 		.content{
 			width: 80%; 
 			height: 70px; 
 			float: left;
+            padding-left: 15px;
 		}
 		.content p{
-			font-size: 20px; 
-			font-weight: bold;
-			color: white;
+			
 		}
 		.info_detail1{
-			margin-top: 1rem;
+			margin-top: 0.5rem;
 			width: 100%; 
 			height: 70px;
 		}
@@ -61,31 +60,8 @@
 			height: 70px; 
 			float: left;
 		}
-		.content0{
-			width: 80%; 
-			height: 40px; 
-			float: left;
-		}
-		.content1{
-			width: 40%; 
-			height: 100%; 
-			float: left;
-			border-right: thin solid white;
-		}
-		.content1 p{
-			color: white; 
-			margin-top: 1rem;
-		}
-		.content2{
-			width: 60%; 
-			height: 100%; 
-			float: left;
-		}
-		.content2 p{
-			color: white; 
-			margin-top: 1rem; 
-			text-align: center;
-		}
+		
+		
 		.type_room{
 	      	height: 22px;
 	      	width: 50px;
@@ -101,42 +77,31 @@
 	      	}
 	</style>
 
-	<div class="container-fluid" style="background: url(img/anh8.jpg) no-repeat;background-size: cover; height: calc(100vh); height: 230px">
+	<div class="container-fluid" style="background: url(img/bg_cover.svg) no-repeat;background-size: cover; height: 160px">
 
   		<div class="dautat">
-          	<i class="fas fa-times" style="float: right; margin-top: 0.5rem;font-size: 20px;color: white;"></i>
+          	<img src="img/icon/icon_close.svg" class="float-right mt-3" width="20px">
         </div>
 
-        <div class="info_detail">
+        <div class="info_detail" style="display: flex;">
            	<div class="ima">
-           		<img src="img/avatar.png">
+           		<img src="img/post/IMG_7423.jpg">
            	</div>
 
            	<div class="content">
-           		<p>Khách Hàng</p>
-           		<div class="type_room float-left ml-2">
+           		<p style="font-size: 20px; font-weight: bold;color: white;">Khách Hàng</p>
+           		<div class="type_room">
                      <p>VIP</p>
                 </div>
+                <a href="" style=" text-decoration: none;">
+                        <p class="text-white mt-3" style="font-size: 90%">12 Thông báo&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp   2 Tin nhắn</p>
+                    </a>
            	</div>
+
         </div>
+        
 
-        <div class="info_detail1">
-           	<div class="ima"></div>
-
-           	<div class="content0">
-           		<div class="content1">
-           			<a href="" style=" text-decoration: none;">
-           				<p>12 Thông báo</p>
-           			</a>
-           		</div>
-
-           		<div class="content2">
-           			<a href="" style=" text-decoration: none;">
-           				<p>2 Tin nhắn</p>
-           			</a>
-           		</div>
-           	</div>	
-        </div>
+        
   	</div>
 
 <!-- -------------------------------------- -->
@@ -151,9 +116,7 @@
             color: black;
             font-weight: bold;
         }
-        .btn1:hover {
-            background:#F0FFFF ;
-        }
+        
         .icon{
             width: 15%; 
             height: 40px; 
@@ -178,36 +141,44 @@
             				
     </style>
 
-  	<div class="container-fluid">
-  		<div class="row">
-			<div class="khung mt-2 " style="width: 100%; background: white;">
+  	<div class="container-fluid p-0">
+  		<div class="row m-0">
+			<div class="khung mt-2 bg-secondary" style="width: 100%;">
 				<form class="input_form">
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-home" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color: #ff631c; "></i>
+                                <div class="icon_box float-right mr-2" style="width: 28px;height: 30px;">
+            				<svg id="Icon_home" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 47.365 38.763">
+  <path id="Path" d="M39.6,19.091h5.106a2.436,2.436,0,0,0,1.56-4.448L25.243.47a2.823,2.823,0,0,0-3.121,0L1.1,14.643a2.436,2.436,0,0,0,1.56,4.448H7.765V36.3a2.562,2.562,0,0,0,2.653,2.459h7.959V24.009H28.989V38.763h7.959A2.562,2.562,0,0,0,39.6,36.3Z" transform="translate(0 0)" fill="#ff631c"/>
+</svg>
+  </g>
+</svg></div>
             				</div>
             				<div class="content3">
             					<p>Trang chủ</p>
             					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
 
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
-            				<div class="icon">
-            					<i class="fas fa-umbrella" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color: #ff631c; "></i>
-            				</div>
+            				<div class="icon ">
+                                <div class="icon_box float-right mr-2" style="width: 28px;height: 27px;">
+                            <svg class="float-right" xmlns="http://www.w3.org/2000/svg" width="88%" height="88%" viewBox="0 0 32.84 32.845">
+  <path id="ic_beach_access_24px" d="M21.479,24.094l2.61-2.61L35.841,33.242l-2.6,2.6Zm7.834-10.456,5.219-5.219a18.465,18.465,0,0,0-26.1-.036A20.379,20.379,0,0,1,29.313,13.638ZM8.382,8.437a18.465,18.465,0,0,0,.036,26.1l5.219-5.219A20.379,20.379,0,0,1,8.382,8.437ZM8.419,8.4,8.4,8.419c-.693,5.493,2.135,12.555,7.847,18.285L26.7,16.247C20.992,10.536,13.912,7.707,8.419,8.4Z" transform="translate(-3.001 -3.001)" fill="#ff631c"/>
+</svg></div>
+                            </div>
             				<div class="content3">
             					<p>Thuê resort</p>
             					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -215,14 +186,17 @@
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-bus" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color: #ff631c; "></i>
-            				</div>
+                                <div class="icon_box float-right mr-2" style="width: 27px;height: 27px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 31.033 36.851">
+  <path id="ic_directions_transit_24px" d="M19.516,2C10.944,2,4,2.97,4,9.758V28.184a6.8,6.8,0,0,0,6.788,6.788L7.879,37.882v.97H31.154v-.97l-2.909-2.909a6.8,6.8,0,0,0,6.788-6.788V9.758C35.033,2.97,28.089,2,19.516,2ZM10.788,31.093A2.909,2.909,0,1,1,13.7,28.184,2.905,2.905,0,0,1,10.788,31.093Zm6.788-11.637h-9.7v-9.7h9.7ZM28.244,31.093a2.909,2.909,0,1,1,2.909-2.909A2.905,2.905,0,0,1,28.244,31.093Zm2.909-11.637h-9.7v-9.7h9.7Z" transform="translate(-4 -2)" fill="#ff631c"/>
+</svg></div>
+                            </div>
             				<div class="content3">
             					<p>Thuê tour</p>
             					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -230,14 +204,17 @@
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-car" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color:#ff631c; "></i>
-            				</div>
+                                <div class="icon_box float-right mr-2" style="width: 24px;height: 24px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 37.747 33.553">
+  <path id="ic_drive_eta_24px" d="M36.385,6.118A3.133,3.133,0,0,0,33.407,4H10.34A3.153,3.153,0,0,0,7.362,6.118L3,18.679V35.456a2.1,2.1,0,0,0,2.1,2.1h2.1a2.1,2.1,0,0,0,2.1-2.1v-2.1H34.456v2.1a2.1,2.1,0,0,0,2.1,2.1h2.1a2.1,2.1,0,0,0,2.1-2.1V18.679ZM10.34,27.068a3.146,3.146,0,1,1,3.146-3.146A3.141,3.141,0,0,1,10.34,27.068Zm23.068,0a3.146,3.146,0,1,1,3.146-3.146A3.141,3.141,0,0,1,33.407,27.068ZM7.194,16.582,10.34,7.146H33.407l3.146,9.437Z" transform="translate(-3 -4)" fill="#ff631c"/>
+</svg></div>
+                            </div>
             				<div class="content3">
             					<p>Xe đưa đón</p>
-            					<div class="line" style="height: 0.7px;"></div>
+            					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -248,7 +225,7 @@
 
   	<!-- -------------------------------------------- -->
 
-  	<div class="container-fluid" style="background: #E5CDA6;height: 20px;"></div>
+  	<div class="container-fluid" style="background: #FFEBCD;height: 10px;"></div>
 
   	<!-- ----------------------------------------------------- -->
 
@@ -262,9 +239,7 @@
             color: black;
             font-weight: bold;
         }
-        .btn1:hover {
-            background:#F0FFFF ;
-        }
+
         .icon{
             width: 15%; 
             height: 40px; 
@@ -278,8 +253,9 @@
         .line{
             width: 100%; 
             height: 1px; 
-            background: gray;
+            background: black;
             margin-top: -0.7rem;
+            opacity: 0.1;
         }
         .icon1{
             width: 10%; 
@@ -289,21 +265,25 @@
             				
     </style>
 
-  	<div class="container-fluid">
-  		<div class="row">
+  	<div class="container-fluid p-0">
+  		<div class="row m-0">
 			<div class="khung mt-2 " style="width: 100%; background: white;">
 				<form class="input_form">
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-th-large" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color: #ff631c; "></i>
+            					<div class="icon_box float-right mr-2" style="width: 24px;height: 22px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 36.418 36.418">
+  <path id="ic_dashboard_24px" d="M3,23.232H19.186V3H3ZM3,39.418H19.186V27.279H3Zm20.232,0H39.418V19.186H23.232ZM23.232,3V15.139H39.418V3Z" transform="translate(-3 -3)" fill="#ff631c"/>
+</svg>
+</svg></div>
             				</div>
             				<div class="content3">
             					<p>Trang tổng quan</p>
             					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -311,14 +291,17 @@
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="far fa-calendar-alt" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color: #ff631c; "></i>
+            					<div class="icon_box float-right mr-2" style="width: 25px;height: 25px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 35.522 39.469">
+  <path id="ic_date_range_24px" d="M14.841,19.761H10.894v3.947h3.947Zm7.894,0H18.787v3.947h3.947Zm7.894,0H26.681v3.947h3.947ZM34.575,5.947H32.6V2H28.655V5.947H12.867V2H8.92V5.947H6.947A3.929,3.929,0,0,0,3.02,9.894L3,37.522a3.946,3.946,0,0,0,3.947,3.947H34.575a3.958,3.958,0,0,0,3.947-3.947V9.894A3.958,3.958,0,0,0,34.575,5.947Zm0,31.575H6.947V15.814H34.575Z" transform="translate(-3 -2)" fill="#ff631c"/>
+</svg></div>
             				</div>
             				<div class="content3">
             					<p>Đặt phòng của tôi</p>
             					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -326,14 +309,18 @@
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-cog" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color: #ff631c; "></i>
+            					<div class="icon_box float-right mr-2" style="width: 24px;height: 24px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 35.521 36.518">
+  <path id="ic_settings_24px" d="M33.6,22.048a14.229,14.229,0,0,0,.128-1.789A14.23,14.23,0,0,0,33.6,18.47l3.853-3.013a.921.921,0,0,0,.219-1.169L34.022,7.971a.918.918,0,0,0-1.114-.4L28.361,9.395a13.34,13.34,0,0,0-3.086-1.789l-.694-4.839A.89.89,0,0,0,23.687,2h-7.3a.89.89,0,0,0-.895.767L14.8,7.605a14.028,14.028,0,0,0-3.086,1.789L7.163,7.569a.891.891,0,0,0-1.114.4L2.4,14.288a.9.9,0,0,0,.219,1.169L6.469,18.47a14.48,14.48,0,0,0-.128,1.789,14.48,14.48,0,0,0,.128,1.789L2.616,25.061A.921.921,0,0,0,2.4,26.23l3.652,6.318a.918.918,0,0,0,1.114.4l4.546-1.826A13.34,13.34,0,0,0,14.8,32.912l.694,4.839a.89.89,0,0,0,.895.767h7.3a.89.89,0,0,0,.895-.767l.694-4.839a14.028,14.028,0,0,0,3.086-1.789l4.546,1.826a.891.891,0,0,0,1.114-.4l3.652-6.318a.921.921,0,0,0-.219-1.169Zm-13.566,4.6a6.391,6.391,0,1,1,6.391-6.391A6.4,6.4,0,0,1,20.035,26.65Z" transform="translate(-2.271 -2)" fill="#ff631c"/>
+</svg>
+</svg></div>
             				</div>
             				<div class="content3">
             					<p>Cài đặt tài khoản</p>
             					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -341,14 +328,17 @@
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-comment-dots" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color:#ff631c; "></i>
+            					<div class="icon_box float-right mr-2" style="width: 24px;height: 24px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 35.522 35.522">
+  <path id="ic_sms_failed_24px" d="M33.969,2H5.552A3.547,3.547,0,0,0,2.018,5.552L2,37.522l7.1-7.1H33.969a3.563,3.563,0,0,0,3.552-3.552V5.552A3.563,3.563,0,0,0,33.969,2ZM21.537,23.313H17.985V19.761h3.552Zm0-7.1H17.985V9.1h3.552Z" transform="translate(-2 -2)" fill="#ff631c"/>
+</svg></div>
             				</div>
             				<div class="content3">
             					<p>Tin nhắn</p>
-            					<div class="line" style="height: 0.7px;"></div>
+            					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -356,14 +346,18 @@
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-globe" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color: #ff631c; "></i>
+            					<div class="icon_box float-right mr-2" style="width: 24px;height: 24px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 35.498 35.498">
+  <path id="ic_language_24px" d="M19.731,2A17.749,17.749,0,1,0,37.5,19.749,17.74,17.74,0,0,0,19.731,2Zm12.3,10.649H26.8a27.775,27.775,0,0,0-2.449-6.319A14.252,14.252,0,0,1,32.031,12.649ZM19.749,5.621a25,25,0,0,1,3.39,7.029h-6.78A25,25,0,0,1,19.749,5.621ZM6.011,23.3a13.884,13.884,0,0,1,0-7.1h6a29.313,29.313,0,0,0-.248,3.55,29.313,29.313,0,0,0,.248,3.55Zm1.455,3.55H12.7a27.776,27.776,0,0,0,2.449,6.319,14.176,14.176,0,0,1-7.685-6.319Zm5.236-14.2H7.467a14.176,14.176,0,0,1,7.685-6.319A27.776,27.776,0,0,0,12.7,12.649Zm7.046,21.228a25,25,0,0,1-3.39-7.029h6.78A25,25,0,0,1,19.749,33.877ZM23.9,23.3H15.6a26.114,26.114,0,0,1-.284-3.55A25.887,25.887,0,0,1,15.6,16.2H23.9a25.887,25.887,0,0,1,.284,3.55A26.114,26.114,0,0,1,23.9,23.3Zm.444,9.868A27.776,27.776,0,0,0,26.8,26.849h5.236A14.252,14.252,0,0,1,24.346,33.167ZM27.488,23.3a29.313,29.313,0,0,0,.248-3.55,29.313,29.313,0,0,0-.248-3.55h6a13.884,13.884,0,0,1,0,7.1Z" transform="translate(-2 -2)" fill="#ff631c"/>
+</svg>
+</svg></div>
             				</div>
             				<div class="content3">
             					<p>Thông báo</p>
             					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -371,14 +365,18 @@
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-heart" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color: #ff631c; "></i>
+            					<div class="icon_box float-right mr-2" style="width: 24px;height: 24px;">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 35.522 32.591">
+  <path id="ic_favorite_24px" d="M19.761,35.591l-2.575-2.344C8.039,24.952,2,19.482,2,12.768A9.674,9.674,0,0,1,11.768,3a10.636,10.636,0,0,1,7.992,3.712A10.636,10.636,0,0,1,27.753,3a9.674,9.674,0,0,1,9.768,9.768c0,6.714-6.039,12.184-15.185,20.5Z" transform="translate(-2 -3)" fill="#ff631c"/>
+</svg>
+</svg></div>
             				</div>
             				<div class="content3">
             					<p>Yêu thích</p>
             					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -386,14 +384,18 @@
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-image" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color: #ff631c; "></i>
+            					<div class="icon_box float-right mr-2" style="width: 24px;height: 24px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 36">
+  <path id="ic_local_movies_24px" d="M32,3V7H28V3H12V7H8V3H4V39H8V35h4v4H28V35h4v4h4V3ZM12,31H8V27h4Zm0-8H8V19h4Zm0-8H8V11h4ZM32,31H28V27h4Zm0-8H28V19h4Zm0-8H28V11h4Z" transform="translate(-4 -3)" fill="#ff631c"/>
+</svg>
+</svg></div>
             				</div>
             				<div class="content3">
             					<p>Khuyến mãi</p>
             					<div class="line"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
@@ -401,14 +403,22 @@
             		<div class="btn1">
             			<a href="#" style="text-decoration: none;">
             				<div class="icon">
-            					<i class="fas fa-sign-out-alt" style=" float: right;margin-right: 0.8rem; margin-top: 0.2rem; font-size:25px; color:#ff631c; "></i>
+            					<div class="icon_box float-right mr-2" style="width: 22px;height: 24px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 37.979 32.876">
+  <g id="Group_2" data-name="Group 2" transform="translate(-508.223 -782.414)">
+    <path id="Path_110" data-name="Path 110" d="M524.46,783.914H512.142s-2.54.792-2.413,4.3,0,23.313,0,23.313a2.8,2.8,0,0,0,2.413,2.15c2.032.226,12.317,0,12.317,0" transform="translate(0 0)" fill="none" stroke="#ff631c" stroke-width="3"/>
+    <path id="Path_111" data-name="Path 111" d="M514.632,793H540.79" transform="translate(3.719 6.641)" fill="none" stroke="#ff631c" stroke-width="3"/>
+    <path id="Path_112" data-name="Path 112" d="M523.656,787.969l8.127,7.984-8.127,7.165" transform="translate(12.219 3.819)" fill="none" stroke="#ff631c" stroke-width="3"/>
+  </g>
+</svg>
+</svg></div>
             				</div>
             				<div class="content3">
             					<p>Đăng xuất</p>
             					<div class="line" style="height: 0.7px;"></div>
             				</div>
 							<div class="icon1">
-            					<i class="fas fa-angle-right" style=" float: left; margin-top: 0.4rem; font-size:20px; color: gray; "></i>
+            					<img src="img/icon/icon_next.svg" width="7px">
             				</div>
             			</a>
             		</div>
