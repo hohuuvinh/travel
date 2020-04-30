@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <!-- Fontawsome -->
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <!-- JS -->
+    <script type="text/javascript"src="js/jquery-3.3.1.slim.min.js"></script>
+    
+    <script type="text/javascript"src="js/popper.min.js"></script>
+    <script type="text/javascript"src="css/bootstrap.min.css"></script>
+    <script type="text/javascript"src="js/bootstrap.min.js"></script>
+    <!-- Fontawsome -->
+    <script type="text/javascript" src="js/all.js"></script>
+    
+</head>
+<body style="background: #FAEEDE;">
+
+
+<style type="text/css">
+     
+.menu{
+/*  -webkit-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+  -moz-box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);
+  box-shadow: 7px 13px 24px -27px rgba(231,166,26,1);*/
+  background: #fff;
+  position: fixed;
+  z-index: 99999;
+  height: 60px;
+}
+.menu nav{ 
+  width: 100%;
+}
+ .menu label.logo{
+  color: black;
+  font-size: 35px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+ .menu nav ul{
+  float: right;
+  margin-right: 20px;
+}
+ .menu nav ul li{
+  display: inline-block;
+  margin: 18px 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  padding: 7px 10px;
+  border-radius: 3px;
+
+}
+a:hover{
+  opacity: 0.8;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+@media (max-width: 1326){
+	 #card-body{
+ 	padding: 10px;
+ } 
+}
+@media (max-width: 952px){
+  label.logo{
+    display: none;
+  }
+  nav ul li a{
+    float: left;
+    color: #Fff;
+    text-align: center;
+  }
+
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  .menu nav ul {
+    padding: 0;
+    padding-top: 2rem;
+  }
+  ul{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #2c3e50;
+    
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  
+}
+	.hover a{
+		color: black;
+		text-decoration: none;			
+	}
+	.hover a:hover{
+	color: #ff631c;	
+	 text-decoration: underline;
+	}
+	
+	
+
+  /*------------Phần css của index9---------------*/
+
+   
+   
+
+::-webkit-scrollbar:horizontal { 
+     display: none; 
+ }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+    </style>
+
+
+
+  <div class="menu_main container-fluid p-0" style="height: 60px; font-family: Helvetica, Arial, sans-serif">
+    
+
+    <div class="menu" style="width: 100%;">
+      <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">TraveIcon</label>
+      <ul>
+        <li><a href="#" style="text-decoration: none;">Thuê khách sạn</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Resort</a></li>
+        <li><a href="#" style="text-decoration: none;">Thuê Tour</a></li>
+        <li><a href="#" style="text-decoration: none;">Xe đưa đón</a></li>
+        <li><a href="#" style="text-decoration: none;">Đăng nhập</a></li>
+      </ul>
+    </nav>
+    </div>
+
+
+
+  </div>
+
+
+
+
+<div class="container-fluid p-0 bg-white">
+	<div class="khung pt-5" style="font-family: Helvetica, Arial, sans-serif; margin: 0 auto;">
+
+		<h1 class="text-center">Xin chào, Bạn cần giúp gì?</h1>
+
+		<div class="box p-2" style="background: white; width: 50%; margin: 0 auto; box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75); border-radius: 10px;">	  
+		      <span class="icon mr-2 ml-2"><i class="fa fa-search"></i></span>
+		      <input type="search" id="search" placeholder="Nhập nội dung tìm kiếm" class="border-0"/>
+
+		      <a href=""><button style="float: right; border: none; background: #ff631c;; border-radius: 5px; padding: 3px 10px 3px 10px; color: white">Tìm kiếm</button></a>
+		      <div style="clear: right;"></div>
+		</div>
+
+		<div class="box2 mt-3" style="width: 50%; margin: 0 auto;">
+			<p class="float-left mr-2">Gợi ý:</p>
+		<a href=""><div class="btn pt-1 pb-1 pr-2 pl-2" style="font-size: 12px; background: #ff631c; color: white">Cách đặt phòng</div></a>
+		<a href=""><div class="btn pt-1 pb-1 pr-2 pl-2" style="font-size: 12px; background: #ff631c; color: white">Hủy phòng</div></a>	
+		<a href=""><div class="btn pt-1 pb-1 pr-2 pl-2" style="font-size: 12px; background: #ff631c; color: white">Hỏi đáp</div></a>	
+		</div>	
+
+		<div style="clear: left;"></div>			
+			<h6 class="text-center font-weight-bold mt-3">Chọn danh mục cần giúp đỡ, ở đây sẽ có một số câu trả lời cho bạn</h6>
+
+		<div class="row mt-5 mb-5" style="width: 80%; margin: 0 auto;">
+			<div class="col-3">
+				 <div class="card pt-3" style="box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);">
+				    <img src="img/icon/icons8-system-task-100.svg" class="card-img-top" width="45px" height="45px">
+				    <div class="m-2">
+				      <p class="text-center font-weight-bold m-0">Thao tác khách hàng</p>
+				    </div>
+				  </div>
+			</div>
+
+			<div class="col-3">
+				 <div class="card pt-3" style="box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);">
+				    <img src="img/icon/icons8-handshake-128.svg" class="card-img-top" width="45px" height="45px">
+				    <div class="m-2">
+				      <p class="text-center font-weight-bold m-0">Trợ giúp chủ nhà</p>
+				    </div>
+				  </div>
+			</div>
+
+			<div class="col-3">
+				 <div class="card pt-3" style="box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);">
+				    <img src="img/icon/icons8-hotel-check-in-100.svg" class="card-img-top" width="45px" height="45px">
+				    <div class="m-2">
+				      <p class="text-center font-weight-bold m-0">Thao tác hệ thống</p>
+				    </div>
+				  </div>
+			</div>
+
+			<div class="col-3">
+				 <div class="card pt-3" style="box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);">
+				    <img src="img/icon/icons8-questions-64.svg" class="card-img-top" width="45px" height="45px">
+				    <div class="m-2">
+				      <p class="text-center font-weight-bold m-0">Câu hỏi khác</p>
+				    </div>
+				  </div>
+			</div>
+
+		</div>
+
+		<div class="row" style="width: 80%; margin: 0 auto;">
+			<div class="col-4">
+				<p class="font-weight-bold" style="font-size: 18px">Câu hỏi</p>
+
+				<p class="hover m-0"><a href="#"> Vấn đề về thao tác đặt phòng</a></p>
+				<p class="hover m-0"><a href="#"> Làm sao để liên hệ nơi ở</a></p>
+				<p class="hover m-0"><a href="#"> Thanh toán</a></p>
+				<p class="hover m-0"><a href="#"> Đăng ký nơi ở</a></p>
+				<p class="hover m-0"><a href="#"> Hướng dẫn nhận khuyến mãi</a></p>
+				<p class="hover m-0"><a href="#"> Các lỗi hệ thống thường gặp</a></p>
+			</div>
+
+
+			<div class="col-8">
+				<p class="font-weight-bold">Một số câu hỏi thườn gặp</p>
+
+				<div class="btn text-left mt-1" style="width: 100%; background: #B0E0E6"><i class="fas fa-plus float-right mt-1"></i>Hướng dẫn đặt phòng chi tiết</div>
+				<div class="btn text-left mt-2" style="width: 100%; background: #B0E0E6"><i class="fas fa-plus float-right mt-1"></i>Hướng dẫn đặt phòng chi tiết</div>
+				<div class="btn text-left mt-2" style="width: 100%; background: #B0E0E6"><i class="fas fa-plus float-right mt-1"></i>Hướng dẫn đặt phòng chi tiết</div>
+			</div>
+		</div>	
+
+	</div>	
+
+</div>	  
+    
+</body>
+</html>
